@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        nav {
+            max-width: 350px;
+            width: 100%;
+            background-color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            padding: 5px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: aliceblue;
+            text-decoration: none;
+            color: green;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        .logo {
+            position: absolute;
+            left: 200px;
+            width: 215px;
+            height: 110px;
+            margin-top: 20px;
+        }
+
+        .verde {
+            background-color: #006400;
+            min-height: 1%;
+            height: 10%;
+            color: white;
+            display: flex;
+            position: absolute;
+            right: 14%;
+            top: 5%;
+            width: 230px;
+            align-items: center;
+            border-radius: 10px;
+            padding-right: 25px;
+        }
+
+        .menu {
+            margin-right: 1%;
+            position: absolute;
+            right: 29%;
+            top: 7%;
+        }
+
+        .menu img {
+            height: 40px;
+            width: auto;
+        }
+
+        .lg {
+            width: 350px;
+            height: 70px;
+            position: absolute;
+            top: 60px;
+            left: 38%;
+            color: rgb(81, 7, 199);
+        }
+
+        .linhaprodutos {
+            position: absolute;
+            top: 250px;
+            width: 75%;
+            left: 220px;
+        }
+
+        .produtos {
+            display: inline-block;
+            width: 250px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            vertical-align: top;
+        }
+
+        .produtos img {
+            transition: transform 0.3s ease;
+        }
+
+        .produtos:hover img {
+            transform: scale(1.1);
+        }
+
+        .localidade {
+            position: absolute;
+            left: 550px;
+            color: white;
+            bottom: 200px;
+            font-size: 17px;
+        }
+
+        .redessociais {
+            position: absolute;
+            left: 1050px;
+            top: 3360px;
+            color: white;
+        }
+
+        .serviços {
+            position: absolute;
+            font-size: 17px;
+            top: 3550px;
+            left: 500px;
+            color: white;
+        }
+
+        .menu-rodape {
+            position: absolute;
+            top: 3550px;
+            left: 200px;
+            color: white;
+            font-size: 17px;
+        }
+
+        .contato {
+            position: absolute;
+            font-size: 17px;
+            left: 850px;
+            top: 3550px;
+            color: white;
+        }
+        .serviços ul{list-style: none;}
+        .contato ul {list-style: none;}
+.menu-rodape ul{list-style: none;}
+        .linha {
+            width: 70%;
+            height: 1px;
+            background-color: white;
+            position: absolute;
+            top: 3500px;
+            left: 15%;
+        }
+
+        .linhaprodutos1 {
+            position: absolute;
+            top: 850px;
+            width: 75%;
+            left: 220px;
+        }
+
+        .rodapé {
+    background-color: #001F3F;
+    position: absolute;
+    height: 370px;
+   
+    width: 100%; /* Alteração para ocupar a largura total da página */
+    top: 3300px; /* Define o rodapé na parte inferior da página */
+}
+.diminuir{font-size: 10px;}
+        .combos {
+            color: #4e6d19;
+            position: absolute;
+            top: 800px;
+            left: 40%;
+        }
+ 
+        .trio {
+            margin-top: 70px;
+        }
+
+        .colageno {
+            position: absolute;
+            top: 1650px;
+            left: 300px;
+        }
+
+        .separador{   background-image: linear-gradient(to left, #4e6d19, #7f922f);
+            position: absolute;
+            width: 60%;
+            left: 18%;
+            top: 650px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            text-align: center;}
+        .separador1 {
+            background-image: linear-gradient(to left, #4e6d19, #7f922f);
+            position: absolute;
+            width: 60%;
+            left: 18%;
+            top: 1525px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding-top: 100px; 
+            border-top: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+        .separador2{background-image: linear-gradient(to left, #4e6d19, #7f922f);
+            position: absolute;
+            width: 60%;
+            left: 18%;
+            top: 2300px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            border-top: 1px solid black;
+            padding-top: 10px;
+            text-align: center;   }
+        .texto{position: absolute;
+        top: 0px;
+    left: 400px; 
+width: 400px; 
+color: #006400;}
+.kombushow{position: absolute;
+top: 2450px; left: 825px;}
+.texto1{position: absolute; 
+top: 50px;
+width: 400px;
+color: #006400;
+right: 450px;}
+.cinza{color: darkgrey; padding-right: 4%;}
+.verdepreço{color: #7f922f; font-size: 20px;}
+
+.verdemarca{color: #4e6d19;}
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 0; /* Posição ajustável */
+    left: -50px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}
+.triangle1 {
+    width: 0;   
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: -10px; /* Posição ajustável */
+    left: -50px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle2 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: -10px; /* Posição ajustável */
+    left:250px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}
+.triangle3 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: -10px  ; /* Posição ajustável */
+    left: 800px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle4 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: -10px; /* Posição ajustável */
+    left: 520px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle5 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 0; /* Posição ajustável */
+    left: 250px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle6 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 0; /* Posição ajustável */
+    left: 530px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}
+.triangle7 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 0; /* Posição ajustável */
+    left: 800px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}
+.triangle8 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 350px; /* Posição ajustável */
+    left: -10px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle9 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 350; /* Posição ajustável */
+    left: 260px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle10 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 350px; /* Posição ajustável */
+    left: 550px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle11 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 350px; /* Posição ajustável */
+    left: 800px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}
+.textotri{color: white; transform: rotate(45deg); 
+margin-top: 15px;
+font-size: 17px;}
+.butonverde{width: 100%; background-color: #afcc3c;
+color: #006400; 
+border-radius: 5px; 
+height: 30px; margin-top: 10px;
+margin-left: 10PX   ;  
+border:none;}
+.produto{position: absolute;
+top: 250px;
+width: 30%;
+left: 250px;}
+.textoprod{position: absolute;
+left: 550px;
+width: 100%;
+top: 10px; }
+.textprod{font-size: 28px;
+color: #006400;
+border-bottom: 2px solid green;
+width: 100%;
+height: 20%;
+
+padding-right: 8%;}
+.textprod1{position: absolute;
+top: 40px;
+font-size:1em;
+left: 0px; color: green;}
+.preços{position: absolute;
+top: 350px;
+width: 50%;
+left: 800px;}
+.verde3{color: #006400 ;
+font-size: 20px;}
+.cartoes {
+    position: absolute;
+    top: 440px;
+    width: 30%; /* Largura original */
+    height: 20%;
+    border: 1px solid #cccccc;
+    left: 800px;
+    border-width: -200px; /* Reduz a largura da borda */
+    transition: width 0.5s; /* Adiciona uma transição suave */
+}
+
+
+.parcelas {
+    position: absolute;
+    left: 370px; /* Ajuste conforme necessário */
+    top: 14px;
+    transform: translateY(-50%);
+}
+
+.textoparcelas {
+    color: #cccccc; /* Cor adicionada para melhorar a visibilidade */
+}
+.imagesparce {
+    border: 1px solid #cccccc;
+    display: inline-block;
+    padding: 5px;
+    overflow: hidden;
+    height: 25px; /* Ajuste conforme necessário */
+    width: 100%;
+    padding-bottom: 28px;
+    position: relative; /* Adicionado */
+}
+
+
+
+
+
+.images {
+    position: absolute; /* Adicionado */
+    top: 50%; /* Adicionado */
+    transform: translateY(-50%); /* Adicionado */
+}
+
+.textoparcelas {
+    margin-left: 40px;
+    margin-top: 30px; /* Ajuste conforme necessário */
+}
+.textoparcelas1{position: absolute;
+top:35px;color: #cccccc;
+
+padding-top: 5px;
+padding-bottom: 5px;
+left: 0px;
+border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+width: 100%;}
+.textoparcelas2{position: relative;
+left: 10px;}
+.final{position: absolute;
+top: 74% ;
+width: 23%;
+color: #ccc;
+left: 810px;}
+.preçofinal{position: relative;
+top: 0px;
+left: 100%;}
+.disponiveis{position: absolute;
+top: 620px;
+width: 27%;
+font-weight: 700;
+color: #185126  ;
+font-size: 30px;
+left: 810px;}
+.terceiro {
+    position: absolute;
+    left: 160%; /* Posição ajustada para o canto direito */
+    top: 25%; /* Ajuste conforme necessário */
+    width: 100%; /* Largura ajustada */
+    height: 20px; /* Altura ajustada */
+}
+.pimeirosegundo{position: relative;
+top: -15px;}
+.progress-bar {
+    width: 100%; /* Largura da barra de progresso */
+    background-color: #f2f2f2; /* Cor de fundo da barra de progresso */
+    height: 10px; /* Altura da barra de progresso */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+.progress {
+    background-color: #4CAF50; /* Cor da barra de progresso */
+    height: 100%; /* Altura da barra de progresso */
+}
+.primeirosegundo.diminuir{color: white;}
+.cartoes.diminuir {
+    height: 20%;
+    /* Defina o tamanho reduzido aqui */
+    /* Outros estilos para o tamanho reduzido, se necessário */
+}
+.primeirosegundo,
+.terceiro {
+    display: block; /* Certifique-se de que eles ocupem espaço, mesmo quando ocultos */
+}
+.miniaturas-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 10px; /* Espaçamento superior */
+}
+.lupa {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    background-image: url('imagem/ansiomax.png'); /* Imagem ampliada */
+    background-size: 200% 200%; /* Tamanho da imagem ampliada */
+    background-repeat: no-repeat;
+    display: none;
+    pointer-events: none; /* Evita que a lupa interfira com os eventos do mouse */
+}
+
+
+
+
+    </style>
+</head>
+<body>  
+    <div class="cabeçalho">
+        <div class="logo">
+            <img src="imagem/LOGO JBMIX.png" height="105px" width="206px">
+        </div>
+        <div class="lg">
+            <center>
+                <a href="home2.html" class="link">Inicio</a>
+                <a href="empresa.html" class="link">Empresa</a>
+                <a href="#" class="link">Produtos</a>
+                <a href="contato.html" class="link">Contato</a>
+            </center>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li>
+                        <img src="imagem/download-removebg-preview.png" height="10%" width="10%">
+                        <ul>
+                            <li><a href="desinshow.html">Desinshow <img src="imagem/desin show.png"></a></li>
+                            <li><a href="#">Finni mais <img src="imagem/finni mais.png" height="10px" width="10px"></a></li>
+                            <li><a href="#">Gabiru <img src="imagem/gabiru1.png" alt="Gabiru" height="10px" width="10px"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="login">
+            <div class="verde">
+                <img src="imagem/login__1_-removebg-preview.png" alt="Portal do Cliente" height="40%" width="40%">
+                Portal do Cliente
+            </div>
+        </div> 
+    </div>
+  
+    <div class="produto"> <div class="lupa"></div> <img src="imagem/ansiomax.png" height="489px" width="489px"> <div class="textoprod"><span class="textprod"> ANSIOMAX - 30 CÁPSULAS</span>
+        <span class="textprod1">DESINSHOW</span></div> <div class="miniaturas-container">
+            <div class="miniaturas">
+                <img class="miniatura" src="imagem/ansiomax.png" height="50px" width="50px">
+                <img class="miniatura" src="imagem/ansiomaxs.png" height="50px" width="50px">
+            </div>
+        </div>
+    </div>
+ <div class="preços"><span class="verdepreço"><del class="cinza">R$ 99,90</del> R$ 89,90</span>
+        <br>
+           <span class="verde3"> Em até 3x de R$ 29,97</span></div>
+        <div class="cartoes">
+            <div class="imagesparce">
+            <div class="images"> <img src="imagem/visa.png"> <img src="imagem/duas bolas.png"><img src="imagem/amex.png"><img src="imagem/hipercard.png" width="38px" height="24px"><img src="imagem/elo.png" width="38px" height="24px"></div></div><span class="parcelas"> Parcelas▾</span>
+            
+            <span class="textoparcelas1">
+            <span class="textoparcelas2"><br><span class="pimeirosegundo"> 1x de R$ 89,90 sem juros<br>
+            2x de R$ 44,95 sem juros<br></span>
+            <span class="terceiro"> 3x de R$ 29,97 sem juros</span></span></span>
+            </div>
+        <div class="final"> <img src="imagem/boleto.png" class="boleto"><span class="preçofinal">R$89,90</span></div>
+        
+        </div>
+        <div class="disponiveis"> somente 20 disponiveis
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+<script> // Obter a div de progresso
+    var progress = document.getElementById("progress");
+    
+    // Obter o número de disponíveis
+    var disponiveis = parseInt(document.querySelector('.disponiveis').innerText.match(/\d+/));
+    
+    // Atualizar a largura da barra de progresso com base no número disponível
+    progress.style.width = disponiveis + "%";
+    </script>
+ <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Obter a imagem principal e as miniaturas
+    var ansiomax = document.querySelector(".produto img");
+    var miniaturas = document.querySelectorAll(".miniaturas img");
+
+    // Adicionar um ouvinte de clique a cada miniatura
+    miniaturas.forEach(function(miniatura) {
+        miniatura.addEventListener("click", function() {
+            // Obter o src da miniatura clicada
+            var novaSrc = miniatura.src;
+            // Trocar a src da imagem principal
+            ansiomax.src = novaSrc;
+        });
+    });
+});
+</script>
+
+    
+<div class="rodapé"> <div class="logo"> <img src="imagem/LOGO JBMIX.png" height="85px" width="206px"></div> 
+<div class="localidade"> <strong> Rio Grande do Sul</strong>    <br>
+R. Venâncio Aíres, 205 <br>  Centro, Ijuí - RS<br>CEP  98700-000</div>
+</div>
+<div class="redessociais"> <strong> Acompanhe a JBmix nas redes socias</strong>
+    <center>
+<br> <a href="https://www.instagram.com/portaljbmix/"><img src="imagem/intagran (1).png" height="20px" width="20px"></a>
+<a href="https://www.facebook.com/p/Portal-JB-Mix-100082896894574/?locale=pt_BR"><img src="imagem/facebook (1).png" height="30px" width="30px"></a></center> </div>
+<div class="linha"> <div class=""></div></div>
+<div class="menu-rodape"><ul> <li><strong> menu</strong> </li>
+<li>
+Inicio
+</li>
+<li> sobre nós</li>
+<li> contato</li>
+</ul> </div>
+<div  class="serviços"> <ul> <LI><strong> serviços</strong></LI>
+<li> portal do cliente</li>
+</ul></div>
+<div class="contato"> <ul> <li><strong> contato </strong></li>
+<li> <img src="imagem/telefone (1).png" height="15px" width="15px"> (55) 3332-6233        </li></ul></div>
+</body>
+</html>

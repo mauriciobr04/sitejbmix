@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>JB Mix Distribuidora</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        body {
+    font-family: "noto serif",serif;
+        
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        .navbar {
+            margin-bottom: 0;
+            background-color: #001F3F;
+            height: 120px;
+            border-radius: 0;
+            overflow: hidden;
+            padding: 20px 0; /* Adjust the padding to increase header height */
+        }
+        .navbar a {
+            color: white !important;
+        }
+        .navbar a:hover {
+            background-color: #0056b3 !important;
+        }
+        .navbar-header, .navbar-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .navbar-header {
+            position: relative;
+            left: 10%;
+            width: 15%;
+            height: 100px;
+            top:  40px;
+        }
+        .navbar-right {
+            position: relative;
+            top: 32px;
+            right: 10%;
+        }
+        .navbar-nav {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-nav > li {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-nav > li > a {
+            display: inline-block;
+        }
+        .navbar-center {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            font-weight: bold; 
+            color: rgb(95, 96, 97);
+            font-size: 17px;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .localidade {
+            
+            margin-left: 30%;
+            color: white;
+            font-family: "noto serif",serif;
+            margin-top: -80px; /* Ajuste esta propriedade para alinhar verticalmente */
+            font-size: 17px;
+        }
+
+        .redessociais {
+            position: relative;
+            font-family: "noto serif",serif;
+            right: -60%;
+            bottom: 100px; /* Ajuste esta propriedade para alinhar verticalmente */
+            color: white;
+        }
+        .linha {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            z-index: 11;
+            position: relative;
+            bottom: 0px;
+        }
+        body {
+            overflow-x: hidden;
+            font-family: "noto serif",serif;
+        }
+
+        .rodapé {
+            margin-top: 1700px;
+            background-color: #001F3F;
+            position: absolute; 
+            font-family: "noto serif",serif;
+            height: 350px;
+            width: 100%;
+            left: 0px;
+            top:   200px; /* Ajuste esta propriedade para o posicionamento vertical */
+        }
+
+        .serviços ul {
+            list-style: none;
+        }
+
+        .serviços {
+            font-family: "noto serif",serif;
+            
+            font-size: 17px;
+            margin-top: -120px;
+            margin-left: 24%;
+            color: white;
+            list-style: none;
+        }
+        .contato ul {
+            list-style: none;
+        }
+        .contato {
+             
+            font-size: 17px;
+            margin-left: 36%;
+            font-family: "noto serif",serif;
+            margin-top: -60px;
+            color: white;
+        }
+
+        .menu-rodape { 
+            font-family: "noto serif",serif;
+            bottom: 25px;
+            margin-left: 12%;
+            color:white;
+            font-size: 17px;
+        }
+        .menu-rodape ul {
+            list-style: none;
+        }
+        .logo2 {
+            width: 15%;
+            margin-left: 10%;
+            margin-top: 20px;
+        }
+        .logo img {
+            height: 105px;
+            width: 206px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .historia2, .dph {
+            position: relative;
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .dph h5 {
+            margin-top: 0;
+        }
+        
+        .dph {
+            height: 300px;  position: relative;top: 30px; /* Definindo uma altura específica para reduzir o espaço */
+        }
+        .dph .missao{float: left; width: 25%; margin-right: 5%; padding: 10px;
+            box-sizing: border-box;}
+          .dph .visao, .dph .valores {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+         
+        .dropdown-menu {
+            background-color: #001F3F;
+            z-index: 11;
+            height: 90px;
+            position: absolute;
+            left: 120px;
+            top: -10px;
+            border: 1px solid white;
+        }
+        .container {
+            width:1600px; /* Largura fixa para o conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            /* Adicione outros estilos conforme necessário */
+        } 
+        
+        .cabeçalho{width: 100%; color: white; background-color: #001F3F; height: 150px;} 
+        .login{position: relative; left: 80%; top: -155px;}
+        .logoh{position: relative; height: 105px; width: 206px; left: 10%; margin-top: 20px;} 
+        .meio{position: relative; left: 40%;  padding: 25px; top: -80px; }
+        .meio a{color: white;} 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            color: white;
+            position: absolute;
+            background-color: #001F3F;
+            min-width: 160px;
+            max-width: 160px;;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            list-style: none;
+            display: block;
+        }
+        
+        .dropdown-content li{list-style: none;}
+        .dropdown-content a:hover {
+            background-color: #f1f1f1; 
+            color: #001F3F;
+        }
+        
+        .show {
+            display: block;
+        }
+        .suspenso{position: relative; left: 200px; width: 10%; top: -22px;}
+        /* Estilo para o dropdown */
+ 
+
+/* Estilo para o link "Páginas" dentro do dropdown */
+ 
+/* Estilo para o link "Páginas" quando o dropdown está ativo */
+ 
+
+      
+ 
+ .login a{ color: white; text-decoration: none;}
+ 
+.navbar-nav a:hover{background-color: #f4f4f4;}
+.container {
+            width:100%; 
+            max-width: 1590px; /* Largura fixa para o conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            /* Adicione outros estilos conforme necessário */
+        }
+        @media (max-width: 1000px) {
+            .dph .missao,
+            .dph .visao,
+            .dph .valores {
+                height: auto;
+                text-align: center;
+                width: 100%; /* Ocupa 100% da largura quando a tela for menor que 1000px */
+                margin-right: 0;
+                margin-bottom: 20px; /* Espaçamento entre os elementos */
+                float: none; /* Remove o float para alinhar verticalmente */
+                clear: both; /* Limpa o float */
+            }
+        }
+     
+        .blog{width: 100%; position: relative; height:  00px;}
+.bloq img{border-radius:20px;position: relative; left: 7%; width: 50%; margin-top: 50px;  }
+.blogtext{width: 50%; position: relative; left: 7%; top: 50px;}
+.outras-partes{position: relative; left: 58%; top: -1340px; height: 400px;}
+.e2{position: relative; width: 20%; text-align: justify;  }
+.e2 img{left: 0%; width: 100%;}
+
+@media (max-width:1300px){.outras-partes{top: -1450px;} }
+          @media (max-width:1000px){.historia2 {font-size: 9.3vw;}}
+          @media (max-width:1000px){.bloq img{width: 100%; left: 0%;}}
+          @media (max-width:1000px){.blogtext{ width: 100%; left: 0%;}}
+          @media(max-width:1000px){.outras-partes {top: 70px;  width: 100%; left: 0%;}}
+          @media (max-width:1000px){.e2 {float:left;width: 33.33%; padding: 20px;left: 0%; ; }}
+          @media(max-width:1000px){.rodapé {position: absolute;  top: 360px;}}
+          @media(max-height:1034px){.rodapé {top: 460px;}}
+          @media(max-height:1000px){.rodapé {top: 360px;}}
+          
+      
+          .leia:hover{color: #005f4e; background-color: white; border: 1px solid #005f4e;}
+        .leia{position: relative; background-color: #005f4e; border: 1px solid #005f4e; border-radius: 20px; width: 100%; height: auto; border: 1px solid transparent; padding: 3px; color: white;}
+        @media(min-height:900px){.rodapé {top: 460px;}}
+        @media(min-height:1060px){.rodapé {top: 420px;}} 
+
+
+        .linha2 {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            z-index: 110;
+           display: none;
+            position: relative;
+            bottom: -20px;
+        }
+        @media(max-width:1000px){.linha2{display: block; position: relative; bottom:  -200px;}}
+        @media (max-width:1000px){.rodapé {top:  0px; position: relative;    height: 350px;}} 
+        @media (max-width:1000px){.modelo {top:850px; left: 25%; width: 80%; display: none;}}
+        @media (max-width:1000px){.contato1 {left: 22%;}}
+        @media (max-width:1000px){.modelo1 {display: block; top: 850px; left: 12.5%;}}
+        @media (max-width:1000px){.cabeçalho{font-size: 8.5vw;}}
+@media(max-width:1000px){.meio{left: 220px; top: -100px;}}
+@media(max-width:1000px){.logoh{left: 2%;  }}
+@media(max-width:1000px){.login{left:  730px; position: relative; z-index: 120;top: -285px;}}
+
+ 
+
+          @media(max-width:900px){.rodapé {top:  3200px; position: absolute;}}
+          @media(max-width:1000px){.localidade{font-size: 9.0vw; left: 300px; position: relative;}}
+          @media(max-width:1000px){.rodapé{font-size: 9.0vw; height:1000px;}}
+          @media(max-width:1000px){.menu-rodape{font-size: 9.0vw; top: 740px; position: absolute; }}
+          @media(max-width:1000px){.logo2{font-size: 9.0vw;width: 40%; top: 50px;  position: relative;     }}
+          @media(max-width:1000px){.contato{font-size: 9.0vw; position: absolute; top: 805px;  }}
+          @media(max-width:1000px){.linha{top: -50px;}}
+          @media(max-width:1000px){.serviços{font-size: 9.0vw;position: absolute ; top: 865px; left: 42%;  }  }
+          @media(max-width:1000px){.redessociais{font-size: 9.0vw; top:150px; left:8%; text-align: center;}}
+@media(max-width:1000px){.bloq{font-size: 8.0vw;}}
+
+</style>
+    </head>
+    <body>
+        <script>
+            function toggleDropdown() {
+    var dropdown = document.querySelector('.dropdown-content');
+    dropdown.classList.toggle('active');
+}
+            document.addEventListener('DOMContentLoaded', function() {
+                var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    
+                dropdownToggles.forEach(function(toggle) {
+                    toggle.addEventListener('click', function(e) {
+                        var parentLi = this.parentElement;
+                        var dropdownContent = parentLi.querySelector('.dropdown-content');
+    
+                        if (dropdownContent.classList.contains('show')) {
+                            dropdownContent.classList.remove('show');
+                        } else {
+                            var openDropdowns = document.querySelectorAll('.dropdown-content.show');
+                            openDropdowns.forEach(function(dropdown) {
+                                dropdown.classList.remove('show');
+                            });
+                            dropdownContent.classList.add('show');
+                        }
+    
+                        e.stopPropagation(); // Evitar que o click no dropdown feche o menu
+                    });
+                });
+    
+                // Fechar dropdowns ao clicar fora deles
+                document.addEventListener('click', function(e) {
+                    var dropdowns = document.querySelectorAll('.dropdown-content');
+                    dropdowns.forEach(function(dropdown) {
+                        if (!dropdown.contains(e.target)) {
+                            dropdown.classList.remove('show');
+                        }
+                    });
+                });
+            });
+        </script>
+        <div class="cabeçalho">
+            <div class="container"><div class="logoh"> <img src="imagem/LOGO JBMIX.png" height="105px" width="206px"></div> <div class="meio"><a href="home2.html" class="link transition-link">Inicio</a>
+                <a href="empresa.html" class="link transition-link">Empresa</a>
+                <a href="produtos.html" class="link transition-link">Produtos</a> 
+                <a href="contato.html" class="link transition-link">Contato</a>
+                <div class="suspenso">
+                
+                     
+                        <a href="#" class="dropdown-toggle">paginas <span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">desinshow</a></li>
+                            <li><a href="#">finni mais</a></li>
+                            <li><a href="#">gabiru</a></li>
+                        </ul>
+                    </li>
+                </ul></div> </div> <div class="login"><a href="login.html"><img src="imagem/login__1_-removebg-preview.png" height="auto" width="30px"> login cliente   </a> </div>  </div>
+            
+            
+            
+                   </div>
+<div class="container">  
+<div class="bloq"><img src="imagem/1 urso.jpeg" height="393.33"  ><div class="blogtext"> <strong> in Longo Tempore:</strong><br>
+    <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut ex non ipsum faucibus interdum. Fusce at quam eu risus lacinia rhoncus. Proin eget neque vel turpis lacinia vehicula.
+    <br> <br>
+    Ut tincidunt lacus vitae risus vulputate, nec vehicula nisi ultrices. Donec tincidunt efficitur libero, in consectetur nisi. Fusce mattis tincidunt dictum. Aliquam ornare nibh nec tristique aliquet.
+    <br> <br>
+    Cras feugiat, magna at pulvinar sagittis, lorem nisl placerat risus, id rutrum eros sem ut ligula. Vestibulum mattis efficitur odio, nec consequat orci elementum ac. Aenean luctus massa vitae mi hendrerit sollicitudin. Donec dapibus dolor at justo condimentum consequat.
+    <br> <br>
+    <strong> Insolentiarum Solarium:</strong><br>
+    Nullam faucibus, ante nec convallis tempus, lorem lorem tincidunt velit, at egestas sem justo vel lacus. In hac habitasse platea dictumst. Phasellus nec odio sed mauris volutpat convallis.
+    <br> <br>
+    Nam id lacus elit. Morbi tincidunt erat et ex interdum, at fringilla neque tempor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas fermentum magna nec dolor tincidunt, eget scelerisque justo consequat.
+    <br> <br>
+    Nulla facilisi. Nulla non efficitur magna. Ut sed tortor nec quam condimentum mattis nec eu justo. Sed pharetra leo sit amet diam fringilla, at commodo ipsum pharetra.
+    <br> <br>
+    Integer malesuada augue id erat vestibulum, a gravida dui consequat. Nulla aliquet, metus sit amet commodo posuere, nulla nisi ullamcorper tortor, sit amet aliquam nulla sem a tellus. Mauris fringilla, ligula nec convallis aliquam, odio ligula aliquam quam, sit amet ultrices orci orci a magna.
+    <br> <br>
+   <strong>Protectio Contra Radiis UV:</strong><br>
+    Vivamus nec odio rhoncus, vehicula felis at, aliquet metus. Donec non rhoncus libero. Quisque nec tellus vel diam commodo tincidunt. Donec nec velit scelerisque, mollis arcu eget, eleifend urna. Suspendisse eget dictum leo.
+    <br> <br>
+    Sed congue erat id erat tristique, in mattis felis ultricies. Sed volutpat sit amet justo non dapibus. Aliquam eleifend nec mi nec rhoncus. Maecenas non semper mi.
+    <br> <br>
+    Integer scelerisque, mauris nec consectetur scelerisque, justo ligula gravida lectus, non convallis erat felis sit amet libero. Integer lobortis mi vel nisi commodo, et fermentum sapien efficitur. Sed sem arcu, fermentum at lacinia sed, lobortis id tortor.
+    <br> <br>
+    Vivamus consequat velit a est vehicula commodo. Vivamus pharetra tellus ac eros efficitur, et finibus quam auctor. Nullam quis volutpat ante. Sed tincidunt aliquam nisi, non condimentum leo ultrices ac.
+    <br> <br>
+    Aliquam bibendum purus eu efficitur finibus. Ut id ipsum sed metus gravida faucibus eget vitae purus. Curabitur faucibus quam quis purus faucibus, at elementum risus volutpat. Vivamus in eros sed risus egestas facilisis.</div> 
+<div class="outras-partes"><div class="e2"><img src="imagem/3 passaro.jpeg" height="193.33" width="100%">     <BR><br> In JB mix Distribuidora, salutem et salutem clientium nostrorum magnopere aestimamus. Quam ob rem considerare debemus quod promovere sunscreen plus quam consilium negotium - est officium custodiendi cutem et difficultates ad solem expositae prohibendo. In hoc blog post, quaedam communicamus […]<br><br><button class="leia">leia mais </button></div>      
+  <div class="e2">  <img src="imagem/3 passaro.jpeg" height="193.33" width="100%">   <BR><br> In JB mix Distribuidora, salutem et salutem clientium nostrorum magnopere aestimamus. Quam ob rem considerare debemus quod promovere sunscreen plus quam consilium negotium - est officium custodiendi cutem et difficultates ad solem expositae prohibendo. In hoc blog post, quaedam communicamus […]<br><br><button class="leia">leia mais </button></div>      
+ <div class="e2"> <img src="imagem/3 passaro.jpeg" height="193.33" width="100%">   <BR><br> In JB mix Distribuidora, salutem et salutem clientium nostrorum magnopere aestimamus. Quam ob rem considerare debemus quod promovere sunscreen plus quam consilium negotium - est officium custodiendi cutem et difficultates ad solem expositae prohibendo. In hoc blog post, quaedam communicamus […]<br><br><button class="leia">leia mais </button></div>  </div>    
+</div>        </div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="rodapé">
+    <div class="container">
+        <div class="logo2">
+            <img src="imagem/LOGO JBMIX.png" height="100px" width="100%" alt="Logo">
+        </div>
+        <div class="localidade">
+            <strong>Rio Grande do Sul</strong><br>
+            R. Venâncio Aíres, 205<br>
+            Centro, Ijuí - RS<br>
+            C
+            EP 98700-000
+        </div>
+        <div class="redessociais">
+        <strong>Acompanhe a JBmix nas redes sociais</strong><br>
+        <a href="https://www.instagram.com/portaljbmix/"><img src="imagem/intagran (1).png"   height="20px" width="20px"    alt="Instagram"></a>
+        <a href="https://www.facebook.com/p/Portal-JB-Mix-100082896894574/?locale=pt_BR"><img src="imagem/facebook (1).png" height="30px" width="30px"alt="Facebook"></a>
+        </div>
+        <div class="linha"></div>
+        <div class="linha2"></div>
+        <div class="menu-rodape">
+        <ul>
+        <li><strong>Menu</strong></li>
+        <li>Inicio</li>
+        <li>Sobre Nós</li>
+        <li>Contato</li>
+        </ul>
+        </div>
+        <div class="serviços">
+        <ul>
+        <li><strong>Serviços</strong></li>
+        <li>Portal do Cliente</li>
+        </ul>
+        </div>
+        <div class="contato">
+        <ul>
+        <li><strong>Contato</strong></li>
+        <li><img src="imagem/telefone (1).png" alt="Telefone" height="15" width="15"> (55) 3332-6233</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+         
+</body>
+</html>

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head>
+     
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .dph {
+            position: relative;
+            top: 750px;
+            width: 99%;
+            height: 225px; /* Defina uma altura para a div */
+            background-color:rgb(243, 243, 222);
+            z-index: 1; /* Garante que fique acima dos outros elementos */
+            clear: both; /* Limpa floats */
+        }
+        
+        .missao {
+            width: 33.33%;
+            position: absolute;
+            left: 200px;
+            max-width: 300px;
+        }
+        
+        .visao {
+            width: 33.33%;
+            position: absolute;
+            left: 650px;
+            max-width: 300px;
+        }
+        .valores ul {
+    list-style: none; /* Remover as bolinhas de lista */
+}
+
+.valores {
+    width: 33.33%;
+    position: absolute; 
+    left: 1050px;
+    max-width: 300px;
+}
+
+.valores ul {
+    list-style: none; /* Remover as bolinhas de lista */
+    padding: 0;
+}
+
+.valores ul li {
+    margin-bottom: 8px; /* Espaçamento entre os itens da lista */
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+}
+
+.valores ul li::before {
+    content: "•"; /* Utiliza um ponto como marcador */
+    color: #001F3F; /* Cor do marcador */
+    font-size: 14px; /* Tamanho do marcador */
+    margin-right: 8px; /* Espaçamento entre o marcador e o texto */
+}
+body {
+    font-family: "noto serif",serif;
+        
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        .navbar {
+            margin-bottom: 0;
+            background-color: #001F3F;
+            height: 120px;
+            border-radius: 0;
+            overflow: hidden;
+            padding: 20px 0; /* Adjust the padding to increase header height */
+        }
+        .navbar a {
+            color: white !important;
+        }
+        .navbar a:hover {
+            background-color: #0056b3 !important;
+        }
+        .navbar-header, .navbar-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .navbar-header {
+            position: relative;
+            left:  10%;
+            width: 15%;
+            height: 100px;
+            top:  40px;
+        }
+        .navbar-right {
+            position: relative;
+            top: 32px;
+            right: 10%;
+        }
+        .navbar-nav {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-nav > li {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-nav > li > a {
+            display: inline-block;
+        }
+        .navbar-center {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            font-weight: bold; 
+            color: rgb(95, 96, 97);
+            font-size: 17px;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .localidade {
+            
+            margin-left: 30%;
+            color: white;
+            font-family: "noto serif",serif;
+            margin-top: -80px; /* Ajuste esta propriedade para alinhar verticalmente */
+            font-size: 17px;
+        }
+
+        .redessociais {
+            position: relative;
+            font-family: "noto serif",serif;
+            right: -60%;
+            bottom: 100px; /* Ajuste esta propriedade para alinhar verticalmente */
+            color: white;
+        }
+        .linha {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            z-index: 11;
+            position: relative;
+            bottom: 0px;
+        }
+        body {
+            overflow-x: hidden;
+            font-family: "noto serif",serif;
+        }
+
+        .rodapé {
+            margin-top: 1700px  ;
+            background-color: #001F3F;
+            position: absolute; 
+            font-family: "noto serif",serif;
+            height: 350px;
+            width: 100%;
+            top: -350px; /* Ajuste esta propriedade para o posicionamento vertical */
+        }
+        .serviços ul {
+            list-style: none;
+        }
+
+        .serviços {
+            font-family: "noto serif",serif;
+            
+            font-size: 17px;
+            margin-top: -120px;
+            margin-left: 24%;
+            color: white;
+            list-style: none;
+        }
+        .contato ul {
+            list-style: none;
+        }
+        .contato {
+             
+            font-size: 17px;
+            margin-left: 36%;
+            font-family: "noto serif",serif;
+            margin-top: -60px;
+            color: white;
+        }
+
+        .menu-rodape { 
+            font-family: "noto serif",serif;
+            bottom: 25px;
+            margin-left: 12%;
+            color:white;
+            font-size: 17px;
+        }
+        .menu-rodape ul {
+            list-style: none;
+        }
+        .logo2 {
+            width: 15%;
+            margin-left:  10%;
+            margin-top: 20px;
+        }
+        .logo img {
+            height: 105px;
+            width: 206px;
+        }
+        .logando{position: absolute;
+        width: 30%;
+    height: 200px;
+    top: 300px;
+    left: 300px; border-right: 1px solid black;
+    padding-right: 25px;
+}.verde a{text-decoration: none; color: white;}
+ 
+            .produtos {
+            display: inline-block;
+            width: 250px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            vertical-align: top;
+        }
+
+        .produtos img {
+            transition: transform 0.3s ease;
+        }
+
+        .cabeçalho{width: 100%; color: white; background-color: #001F3F; height: 150px;} 
+        .login{position: relative; left: 80%; top: -155px;}
+        .logoh{position: relative; height: 105px; width: 206px; left: 10%; margin-top: 20px;} 
+        .meio{position: relative; left: 40%;  padding: 25px; top: -80px; }
+        .meio a{color: white;} 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            color: white;
+            position: absolute;
+            background-color: #001F3F;
+            min-width: 160px;
+            max-width: 160px;;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            list-style: none;
+            display: block;
+        }
+        
+        .dropdown-content li{list-style: none;}
+        .dropdown-content a:hover {
+            background-color: #f1f1f1; 
+            color: #001F3F;
+        }
+        
+        .show {
+            display: block;
+        }
+        .suspenso{position: relative; left: 200px; width: 10%; top: -22px;}
+        .produtos:hover img {
+            transform: scale(1.1);
+        }
+        .progress-bar {
+    width: 100%; /* Largura da barra de progresso */
+    background-color: #f2f2f2; /* Cor de fundo da barra de progresso */
+    height: 10px; /* Altura da barra de progresso */
+    margin-top: 20px; /* Espaçamento superior */
+}
+.pimeirosegundo{position: relative;
+top: 00px;      }
+.primeirosegundo1{top:0 ;}
+.primeirosegundo2{top: 0;}
+
+
+
+.terceiro {
+    position: absolute;
+    color: #ccc;
+    left: 56%; /* Posição ajustada para o canto direito */
+    top:  40px; /* Ajuste conforme necessário */
+    width: 150%; /* Largura ajustada */
+    height: 20px; /* Altura ajustada */
+}.primeirosegundo,
+.terceiro {
+    display: block; /* Certifique-se de que eles ocupem espaço, mesmo quando ocultos */
+}
+ 
+.produto{position: relative;
+top: 200px;
+width: 30%;
+left: 250px;}
+.textoprod{position: absolute;
+left: 550px;
+width: 100%;
+top: 10px; }
+.textprod{font-size: 28px;
+color: #006400;
+border-bottom: 2px solid green;
+width: 100%;
+height: 20%;
+
+padding-right: 8%;}
+.cinza{color: darkgrey; padding-right: 4%;}
+
+.textprod1{position: absolute;
+top: 40px;
+font-size:1em;
+left: 0px; color: green;}
+.preços{position: relative;
+top: -220px;
+width: 50%;
+left: 800px;}
+.verdepreço{color: #7f922f; font-size: 20px;}
+
+.verde3{color: #006400 ;
+font-size: 20px;}
+.cartoes {
+    position: relative;
+    top:-160px;
+    width: 480px; /* Largura original */
+    height: 200px;
+    border: 1px solid #cccccc;
+    left: 800px;
+    border-width: -200px; /* Reduz a largura da borda */
+    transition: width 0.5s; /* Adiciona uma transição suave */
+}
+
+
+.parcelas {
+    position: absolute;
+    left: 370px; /* Ajuste conforme necessário */
+    top: 14px;
+    transform: translateY(-50%);
+}
+
+.textoparcelas {
+    color: #cccccc; /* Cor adicionada para melhorar a visibilidade */
+}
+.imagesparce {
+    border: 1px solid #cccccc;
+    display: inline-block;
+    padding: 5px;
+    overflow: hidden;
+    height: 25px; /* Ajuste conforme necessário */
+    width: 100%;
+    padding-bottom: 28px;
+    position: relative; /* Adicionado */
+}
+
+
+
+.linhaproduto {
+    border-top: 2px solid green;
+    margin-top:  0px;
+}
+
+
+.images {
+    position: absolute; /* Adicionado */
+    top: 50%; /* Adicionado */
+    transform: translateY(-50%); /* Adicionado */
+}
+
+.textoparcelas {
+    margin-left: 40px;
+    margin-top: 30px; /* Ajuste conforme necessário */
+}
+.textoparcelas1{position: absolute;
+top:35px;color: #cccccc;
+
+padding-top: 5px;
+padding-bottom: 5px;
+left: 0px;
+border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+width: 100%;}
+.textoparcelas2{position: relative;
+left: 10px;}
+.final{position: relative;
+top: -190px ;
+width: 23%;
+color: #ccc;
+left: 53%;}
+.preçofinal{position: relative;
+top: 0px;
+left: 350px ;}
+.disponiveis{position: relative;
+top:    -200px;
+width: 27%;
+font-weight: 700;
+color: #185126  ;
+font-size: 30px;
+left: 810px;}
+.progress {
+    background-color: #4CAF50; /* Cor da barra de progresso */
+    height: 100%; /* Altura da barra de progresso */
+}
+.descrição{position: relative; width: 35%; left:800px;top: -210px; font-size: 16px; color: #185126;} 
+.linhaprdução{top: 25px; position: relative;}
+.titulo{font-weight: bold;}
+.descriçãonegrito{position: relative; font-size: 25px; text-align: center;}
+.desriçãotext{position: relative; width: 80%;
+top: 10px;} 
+.motivo{position: relative;
+left:800px; font-size: 16px; width: 35%; color: #1d3825; font-weight: bold;
+top: -200px;}
+.botao{position: relative;
+top: -130px;
+ width:1000px;
+left: 680px;}
+ .botaocomprar{position: relative; left: 1100px; background-color: #006400   ;   border: 2px solid rgba(0, 0, 0, 0.5);  padding-left: 15px;padding-right: 5px; top: -220px; width: 150px;}
+.botaocomprar a{color: white; text-decoration: none;}
+.espaçocompra{position: relative; left: 800px;        padding-left: 15px;padding-right: 5px; top: -190px; width: 150px;}
+.btun{background-color: #7f922f; color: white; padding: 10px;} 
+.btun a{color: white; text-decoration: none; }
+    body{overflow-x: hidden;}
+    .container {
+            width:100%; /* Largura fixa para o conteúdo */
+            margin: 0 auto;
+            max-width: 1590px; /* Centraliza o conteúdo horizontalmente */
+            /* Adicione outros estilos conforme necessário */
+        }
+        
+        .zoom {
+            overflow: hidden; 
+         
+        }
+        
+        .zoom-img {
+            transition: transform 0.0s ease;
+            
+           
+        }
+        
+        .zoom:hover .zoom-img {
+            transform: scale(1.9);
+          
+        }
+        @media(max-width:1000px){.zoom{width: 500px; left: -50%; position: relative;}}
+        @media(max-width:1000px){.textoprod{  left: 150%; position: absolute;}}
+        @media(max-width:1000px){.preços{   left: 72%; top: -240px; font-size: 9.0vw;}}
+        @media(max-width:1000px){.cartoes{  left: 72%; width: 25%; height: 210px;  top: -240px;}}
+        @media(max-width:1000px){.terceiro{    top:  0px;    left: 0; position: relative;  }}
+        @media(max-width:1000px){.primeirosegundo1{height: auto;     }}
+        @media(max-width:1000px){.final{ left: 550px; width: 25%; top:  -270px; }}
+        @media(max-width:1000px){.boleto{  left:60%; position: absolute;}}
+        @media(max-width:1000px){.preçofinal{  left:130%; width: 25%; position: absolute;}}
+        @media(max-width:1000px){.disponiveis{  left:70%; width: auto; top: -230px; }}
+        @media(max-width:1000px){.espaçocompra{  left:70%; width: auto; top: -215px; }}
+        @media(max-width:1000px){.botaocomprar{  left:85%; width: 15%; top: -240px ;}}
+        @media(max-width:1000px){.descrição{  left:70%; width: 38%; text-align: justify; }}
+        @media(max-width:1000px){.motivo{  left:0%; width: 100%; text-align: center;  }}
+      .login a{color: white;}
+      .dropdown-content {
+            display: none;
+            color: white;
+            position: absolute;
+            background-color: #001F3F;
+            min-width: 160px;
+            top: 50px;
+            max-width: 200px;;
+            
+            z-index: 1;
+        }  
+
+
+
+.linha2 {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            z-index: 110;
+           display: none;
+            position: relative;
+            bottom: -20px;
+        }
+        @media(max-width:1000px){.linha2{display: block; position: relative; bottom:  -200px;}}
+        @media (max-width:1000px){.rodapé {top:  0px; position: relative;    height: 350px;}} 
+        @media (max-width:1000px){.modelo {top:850px; left: 25%; width: 80%; display: none;}}
+        @media (max-width:1000px){.contato1 {left: 22%;}}
+        @media (max-width:1000px){.modelo1 {display: block; top: 850px; left: 12.5%;}}
+        @media (max-width:1000px){.cabeçalho{font-size: 8.5vw;}}
+@media(max-width:1000px){.meio{left: 220px; top: -100px;}}
+@media(max-width:1000px){.logoh{left: 2%;  }}
+@media(max-width:1000px){.login{left:  730px; position: relative; z-index: 120;top: -285px;}}
+
+ 
+
+          @media(max-width:900px){.rodapé {top:  -200px; position: absolute;}}
+          @media(max-width:1000px){.localidade{font-size: 9.0vw; left: 300px; position: relative;}}
+          @media(max-width:1000px){.rodapé{font-size: 9.0vw; height:1000px;}}
+          @media(max-width:1000px){.menu-rodape{font-size: 9.0vw; top: 740px; position: absolute; }}
+          @media(max-width:1000px){.logo2{font-size: 9.0vw;width: 40%; top: 50px;  position: relative;     }}
+          @media(max-width:1000px){.contato{font-size: 9.0vw; position: absolute; top: 805px;  }}
+          @media(max-width:1000px){.linha{top: -50px;}}
+          @media(max-width:1000px){.serviços{font-size: 9.0vw;position: absolute ; top: 865px; left: 42%;  }  }
+          @media(max-width:1000px){.redessociais{font-size: 9.0vw; top:150px; left:8%; text-align: center;}}
+          @media(max-width:1000px){.textprod1{top: 80px;}
+        }
+        </style>
+</head>
+<body>      
+    <script>
+        function toggleDropdown() {
+var dropdown = document.querySelector('.dropdown-content');
+dropdown.classList.toggle('active');
+}
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+            dropdownToggles.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    var parentLi = this.parentElement;
+                    var dropdownContent = parentLi.querySelector('.dropdown-content');
+
+                    if (dropdownContent.classList.contains('show')) {
+                        dropdownContent.classList.remove('show');
+                    } else {
+                        var openDropdowns = document.querySelectorAll('.dropdown-content.show');
+                        openDropdowns.forEach(function(dropdown) {
+                            dropdown.classList.remove('show');
+                        });
+                        dropdownContent.classList.add('show');
+                    }
+
+                    e.stopPropagation(); // Evitar que o click no dropdown feche o menu
+                });
+            });
+
+            // Fechar dropdowns ao clicar fora deles
+            document.addEventListener('click', function(e) {
+                var dropdowns = document.querySelectorAll('.dropdown-content');
+                dropdowns.forEach(function(dropdown) {
+                    if (!dropdown.contains(e.target)) {
+                        dropdown.classList.remove('show');
+                    }
+                });
+            });
+        });
+    </script>
+    <div class="cabeçalho">
+        <div class="container"><div class="logoh"> <img src="imagem/LOGO JBMIX.png" height="105px" width="206px"></div> <div class="meio"><a href="home2.html" class="link transition-link">Inicio</a>
+            <a href="empresa.html" class="link transition-link">Empresa</a>
+            <a href="produtos.html" class="link transition-link">Produtos</a> 
+            <a href="contato.html" class="link transition-link">Contato</a>
+            <div class="suspenso">
+            
+                 
+                    <a href="#" class="dropdown-toggle">paginas <span class="caret"></span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">desinshow</a></li>
+                        <li><a href="#">finni mais</a></li>
+                        <li><a href="#">gabiru</a></li>
+                    </ul>
+                </li>
+            </ul></div> </div> <div class="login"><a href="login.html"><img src="imagem/login__1_-removebg-preview.png" height="auto" width="30px"> login cliente   </a> </div>  </div>
+        
+        
+        
+               </div> 
+<div class="container">
+    <div class="produto"> 
+        <div class="lupa"></div>
+        <div id="zoom" class="zoom">
+            <img src="imagem/ansiomax.png" height="100%" width="100%" id="zoom-img" class="zoom-img">
+        </div>
+        <div class="miniaturas-container">
+            <div class="miniaturas">
+                <img class="miniatura" src="imagem/ansiomax.png" height="50px" width="50px" class="zoom" class="zoom-img">
+                <img class="miniatura" src="imagem/ansiomaxs.png" height="50px" width="50px" class="zoom" class="zoom-img">
+            </div>
+        </div>
+       
+        <div class="textoprod">
+            <span class="textprod">ANSIOMAX - 30 CÁPSULAS </span>
+            <span class="textprod1">DESINSHOW </span>
+        </div>
+        
+    </div>
+     <div class="preços"><span class="verdepreço"><del class="cinza">R$ 99,90</del> R$ 89,90</span>
+            <br>
+               <span class="verde3"> Em até 3x de R$ 29,97</span></div>
+            <div class="cartoes">
+                <div class="imagesparce">
+                <div class="images"> <img src="imagem/visa.png"> <img src="imagem/duas bolas.png"><img src="imagem/amex.png"><img src="imagem/hipercard.png" width="38px" height="24px"><img src="imagem/elo.png" width="38px" height="24px"></div></div><span class="parcelas"> Parcelas▾</span>
+                
+                <div class="textoparcelas1">
+                <div class="textoparcelas2"><br><div class="primeirosegundo1">   1x de R$ <span id="primeirosegundo1">89,90</span>sem juros</div><br>
+            <div class="primeirosegundo2"> de  R$<span id="primeirosegundo2"> 44,95 </span>sem juros</div><br>
+                <div class="terceiro"> 3x de R$ <span id="terceiro">3</span> sem juros</div></div> </div></div>
+                 
+            <div class="final"> <img src="imagem/boleto.png" class="boleto"><span class="preçofinal" id="precoTotal">R$ 89,90</span></div>
+             
+            <div class="disponiveis"> somente 20 disponiveis
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+            <script>
+                window.addEventListener('DOMContentLoaded', () => {
+                    document.body.classList.add('fade-in-active');
+                });
+        
+                document.querySelectorAll('.transition-link').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.body.classList.add('fade-out');
+                        setTimeout(() => {
+                            window.location.href = this.href;
+                        }, 500);
+                    });
+                });
+            </script>
+            <div class="espaçocompra">
+                <!-- Botão para diminuir o número -->
+                <button class="botao-numero" onclick="diminuirNumero()">-</button>
+                <!-- Número -->
+                <input type="number" id="numero" value="1" min="1" max="10" oninput="atualizarPagina()">
+                <!-- Botão para aumentar o número -->
+                <button class="botao-numero" onclick="aumentarNumero()">+</button>
+                <!-- Botão Comprar Agora --></div>
+               <div class="botaocomprar">  <a href="#">Comprar Agora</a> </div>
+                <script>
+                // Preço inicial
+                var precoInicial = 89.90;
+                var quantidadeSelecionada = 1; // Quantidade inicial
+                var precoUnitarioElement = document.getElementById("precoTotal"); // Elemento span do preço total
+                var primeiroSegundo1Element = document.getElementById("primeirosegundo1"); // Elemento com id primeirosegundo1
+                var primeiroSegundo2Element = document.getElementById("primeirosegundo2"); // Elemento com id primeirosegundo2
+                var terceiroElement = document.getElementById("terceiro"); // Elemento com id terceiro
+                var botaoComprar = document.getElementById("botaoComprar"); // Botão comprar
+        
+                // Função para atualizar a página com base na quantidade selecionada
+                function atualizarPagina() {
+                    quantidadeSelecionada = parseInt(document.getElementById("numero").value); // Atualiza a quantidade selecionada
+                    var precoTotal = quantidadeSelecionada * precoInicial; // Calcula o preço total
+                    precoUnitarioElement.textContent = "R$ " + precoTotal.toFixed(2); // Formata o preço total com duas casas decimais
+        
+                    // Calcula os preços divididos e atualiza os elementos correspondentes
+                    primeiroSegundo1Element.textContent = (precoTotal / 1).toFixed(2); // Dividido por 1
+                    primeiroSegundo2Element.textContent = (precoTotal / 2).toFixed(2); // Dividido por 2
+                    terceiroElement.textContent = (precoTotal / 3).toFixed(2); // Dividido por 3
+        
+                    // Atualiza o texto do botão com base na quantidade selecionada
+                    botaoComprar.textContent = "Comprar " + quantidadeSelecionada + " unidade(s)";
+                }
+        
+                // Função para diminuir a quantidade
+                function diminuirNumero() {
+                    if (quantidadeSelecionada > 1) {
+                        quantidadeSelecionada--;
+                        document.getElementById("numero").value = quantidadeSelecionada; // Atualiza o valor do campo de entrada
+                        atualizarPagina(); // Atualiza a página
+                    }
+                }
+        
+                // Função para aumentar a quantidade
+                function aumentarNumero() {
+                    if (quantidadeSelecionada < 10) { // Limite máximo de 10 unidades
+                        quantidadeSelecionada++;
+                        document.getElementById("numero").value = quantidadeSelecionada; // Atualiza o valor do campo de entrada
+                        atualizarPagina(); // Atualiza a página
+                    }
+                }
+        
+                // Função para executar a compra
+                function comprar() {
+                    // Aqui você pode adicionar o código para finalizar a compra, como enviar dados para um carrinho de compras ou um sistema de pagamento.
+                    var precoTotal = quantidadeSelecionada * precoInicial;
+                    console.log("Compra realizada! Quantidade: " + quantidadeSelecionada + ", Preço Total: R$ " + precoTotal.toFixed(2));
+                }
+        
+                // Inicializa a página quando carregada
+                window.onload = function () {
+                    atualizarPagina();
+                };
+            </script>
+            <script> // Obter a div de progresso
+        var progress = document.getElementById("progress");
+        
+        // Obter o número de disponíveis
+        var disponiveis = parseInt(document.querySelector('.disponiveis').innerText.match(/\d+/));
+        
+        // Atualizar a largura da barra de progresso com base no número disponível
+        progress.style.width = disponiveis + "%";
+        </script>
+     <script>
+            document.addEventListener("DOMContentLoaded", function () {
+        // Obter a imagem principal e as miniaturas
+        var ansiomax = document.querySelector(".produto img");
+        var miniaturas = document.querySelectorAll(".miniaturas img");
+    
+        // Adicionar um ouvinte de clique a cada miniatura
+        miniaturas.forEach(function(miniatura) {
+            miniatura.addEventListener("click", function() {
+                // Obter o src da miniatura clicada
+                var novaSrc = miniatura.src;
+                // Trocar a src da imagem principal
+                ansiomax.src = novaSrc;
+            });
+        });
+    });
+    </script>
+<div class="descrição">
+    <div class="titulo">Detalhes do produto</div>
+    <hr class="linhaproduto">
+    <div class="desriçãotext">
+        <div class="descriçãonegrito"><strong class="descriçãonegrito">Suplemento alimentar de fenilanina, triptofano, melatonina e vitaminas em cápsula.</strong></div><br>
+        Poderoso aliado no tratamento da ansiedade. Tem funções anti-inflamatórias, traz sensação de bem estar, alivio de stress e consequentemente diminuição do apetite, além de propiciar uma boa noite de sono!
+    </div>
+</div>
+<div class="motivo"> <titulo> Motivos de Comprar Conosco </titulo> 
+    <hr class="linhaproduto">
+<div class="imagens"><img src="imagem/seguranças.png"></div>
+
+
+</div>
+ 
+</div>
+<div class="rodapé">
+    <div class="container">
+        <div class="logo2 ">
+            <img src="imagem/LOGO JBMIX.png" height="100px" width="100%" alt="Logo">
+        </div>
+        <div class="localidade">
+            <strong>Rio Grande do Sul</strong><br>
+            R. Venâncio Aíres, 205<br>
+            Centro, Ijuí - RS<br>
+            C
+            EP 98700-000
+        </div>
+        <div class="redessociais">
+        <strong>Acompanhe a JBmix nas redes sociais</strong><br>
+        <a href="https://www.instagram.com/portaljbmix/"><img src="imagem/intagran (1).png"   height="20px" width="20px"    alt="Instagram"></a>
+        <a href="https://www.facebook.com/p/Portal-JB-Mix-100082896894574/?locale=pt_BR"><img src="imagem/facebook (1).png" height="30px" width="30px"alt="Facebook"></a>
+        </div>
+        <div class="linha"></div>
+        <div class="linha2"></div>
+        <div class="menu-rodape">
+        <ul>
+        <li><strong>Menu</strong></li>
+        <li>Inicio</li>
+        <li>Sobre Nós</li>
+        <li>Contato</li>
+        </ul>
+        </div>
+        <div class="serviços">
+        <ul>
+        <li><strong>Serviços</strong></li>
+        <li>Portal do Cliente</li>
+        </ul>
+        </div>
+        <div class="contato">
+        <ul>
+        <li><strong>Contato</strong></li>
+        <li><img src="imagem/telefone (1).png" alt="Telefone" height="15" width="15"> (55) 3332-6233</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+</body>
+</html>

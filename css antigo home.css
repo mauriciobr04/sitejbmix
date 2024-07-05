@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+ 
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        nav {
+            z-index: 1000; /* Z-index adicionado para garantir que o menu fique acima de outros elementos */
+            max-width: 350px;
+            width: 100%;
+            background-color: white;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            padding: 10px; /* Aumentei o padding para aumentar a área clicável */
+            /* Outros estilos permanecem os mesmos */
+        }
+        
+        nav ul li a {
+            color: blue;
+            text-decoration: none;
+        }
+        
+        nav ul li a:hover {
+            background-color: aliceblue;
+            text-decoration: none;
+            color: green;
+        }
+        
+        nav li ul {
+            display: none;
+        }
+        
+        nav li:hover ul {
+            display: block;
+        }
+        
+        .logo {
+            position: absolute;
+            left: 200px;
+            width: 215px;
+            height: 110px;
+            margin-top: 20px;
+        }
+        .cabeçalho{position: relative;}
+        .verde {
+                background-color: #006400;
+                min-height: 60px;
+                color: white;
+                display: flex;position: relative;
+                right:20px;
+                top: 3%; width: 230px;
+                align-items: center;
+                border-radius: 10px;
+                padding-right: 25px;
+            }
+            
+        
+        .menu {
+            margin-right: 10px;
+            position: absolute;
+            right: 27%;
+            top: 6%;
+        }
+        
+        .menu img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .lg {
+            width: 350px;
+            height: 70px;
+            position: absolute;
+            top: 60px;
+            left: 38%;
+            color: rgb(81, 7, 199);
+        }
+        .historia {
+position: absolute;
+top: 350px;
+width: 40%;
+left: 2%; /* Posição desejada a partir da borda esquerda */
+}
+.historia2{ position: absolute;
+left:200px; top: 350px;
+width: 500px;}
+
+
+        .btn:hover {
+            color: blue;
+        }
+        
+        .link {
+            height: 10px;
+            width: 20px;
+            color: blue;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 16px;
+        }
+        
+        .link:hover {
+            color: green;
+            text-decoration: none;
+        }
+        
+        .login {
+            position: absolute;
+            right: 5%;
+            top: 40px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .login img {
+            width: 85px;
+            height: auto;
+            margin-right: 10px;
+        }
+        
+        .login .verde {
+            margin-left: 10px;
+        }
+        
+        .dph {
+            position: relative;
+            top: 750px;
+            width: 99%;
+            height: 225px; /* Defina uma altura para a div */
+            background-color:rgb(243, 243, 222);
+            z-index: 1; /* Garante que fique acima dos outros elementos */
+            clear: both; /* Limpa floats */
+        }
+        
+        .missao {
+            width: 33.33%;
+            position: absolute;
+            left: 200px;
+            max-width: 300px;
+        }
+        
+        .visao {
+            width: 33.33%;
+            position: absolute;
+            left: 650px;
+            max-width: 300px;
+        }
+        .valores ul {
+    list-style: none; /* Remover as bolinhas de lista */
+}
+ 
+.valores {
+    width: 33.33%;
+    position: absolute; 
+    left: 1050px;
+    max-width: 300px;
+}
+
+.valores ul {
+    list-style: none; /* Remover as bolinhas de lista */
+    padding: 0;
+}
+
+.valores ul li {
+    margin-bottom: 8px; /* Espaçamento entre os itens da lista */
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+}
+
+.valores ul li::before {
+    content: "•"; /* Utiliza um ponto como marcador */
+    color: #001F3F; /* Cor do marcador */
+    font-size: 14px; /* Tamanho do marcador */
+    margin-right: 8px; /* Espaçamento entre o marcador e o texto */
+}
+.verde a{text-decoration: none; color: white;}
+.localidade {
+position: absolute;
+left: 550px;
+color: white;
+bottom: 200px; /* Ajuste esta propriedade para alinhar verticalmente */
+font-size: 17px;
+}
+
+.redessociais {
+position: absolute;
+left: 1050px;
+top: 2750px; /* Ajuste esta propriedade para alinhar verticalmente */
+color: white;
+}
+.linha{width: 70%; height: 1px; background-color: white; position: absolute; top: 2900px; left: 15%;
+}
+
+
+        .rodapé{ background-color: #001F3F;
+    position: absolute;
+    height: 350px;width: 99%;
+top: 2700px;}
+
+        .serviços ul{list-style: none;}
+        
+        .serviços{position: absolute;
+            font-size: 17px;
+        top: 2925px; left: 500px;color: white;
+    list-style: none;}
+    .contato ul{list-style: none;}
+        .contato{position: absolute;
+            font-size: 17px;
+            left: 850px ;
+           top: 2925px;
+            color: white;
+        }
+        .slideshow{position: absolute;
+        top: 200px;
+        height: 1%;
+    left: 10%;
+width:80%;}
+        .menu-rodape{position: absolute;
+        top: 2925px; left: 200px; color:white;
+    font-size: 17px;}
+        .menu-rodape ul{list-style: none;}
+        [data-component="slideshow"] .slide {
+    display: none;
+  }[data-component="slideshow"] .slide.active {
+    display: block;
+  } 
+  .suplementos{position: absolute;
+top: 440px;
+padding-top: 10PX;
+;color: white;
+width: 100%;
+height: 20%;
+background-color: #AAAAAA;}
+.suprimentosp{position: relative;
+float: left;
+left: 200px;
+color: white;
+top: 15px;}
+ .suplementos center:hover{filter: brightness(140%)   saturate(200%) sepia(1) hue-rotate(1800deg); color: PINK;}
+.suplementos img:hover{
+        filter: brightness(140%)   saturate(200%) sepia(1) hue-rotate(1800deg);
+        }
+        .sobre {
+    color: #001F3F;
+    position: absolute;
+    top: 600px;
+    left: calc(50% - (100% / 2));
+    font-weight: 100%;
+    font-size: 25PX;
+    width: 100%; /* Substitua 'largura_da_div' pela largura real da div */
+}
+/* Altere a largura máxima da página */
+
+
+/* Use unidades relativas para o posicionamento e largura dos elementos */
+
+/* Use media q
+
+/* Outras regras de estilo aqui */
+
+.texto{width: 60%;
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    top: -6 0px;
+    color: #474b4e;
+left: calc(50% - (60%/2));}
+.anucio {
+    width: 100%;
+    position: absolute;
+    top: 950px;
+    height: 350px;
+    background: linear-gradient(to bottom right, #005f4e 40%, #006cd1 100%);
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Alterado para coluna para que os elementos fiquem um em cima do outro */
+    justify-content: center;
+    align-items: center;
+}
+
+.textoa {
+    color: #001F3F;
+    position: relative;
+    top: 1000px;
+    text-align: center; /* Alinha o texto horizontalmente no centro */
+    width: 100%; /* Define a largura da div */
+}
+
+.renovar {
+    font-size: 30px;
+    display: block;
+    margin-top: 20px; /* Adicionado um espaçamento entre o texto e o botão */
+}
+.imagem1{position: relative;    top: 1000px;
+left: calc(45%);}
+    .imagem2 {position: relative;
+        top: 800px;
+        left:  185%;
+        width: 50%; /* Define a largura de cada div para 50% da largura da janela */
+        float: left; /* Alinha as divs à esquerda */
+    }
+
+    .imagem2 {
+        float: right; /* Alinha esta div à direita */
+    }
+
+    /* Estilos apenas para visualização */
+    .imagem1,
+    .imagem2 { 
+        height: 200px;
+        
+    }
+    .branco a{color: #000000;}
+.branco {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #cccccc;
+    border-radius: 20px;
+    font-size: 16px;
+    height: 45px;
+    position: relative;
+    top: 10px;
+    text-align: center;
+    margin: 0 auto; /* Adicionado para centralizar horizontalmente */
+    
+    top: 50px; /* Reduzido o deslocamento */ 
+    
+}
+.branco img:hover {
+    filter: brightness(200%);
+}
+
+.branco a:hover{text-decoration: none;color: #ffffff; }
+.branco:hover{background-color: #001F3F; text-decoration: none;
+}
+.titulo{color: #004D40;
+position: relative;
+font-size: 25px;
+top: 10px;
+left:6%;
+}
+.depoimento {
+    position: relative;
+   
+    top: 1200px; /* Adiciona um deslocamento vertical de 1000px */
+}
+.depoimentod {
+    display: flex; 
+    width: 28%;position: relative;
+    top: 100px; 
+    left: -350px; /* Permite que os elementos dentro dela se comportem como flex items */
+}
+.depoimentod1 {
+    display: flex; 
+    width: 28%;position: relative;
+    top: 100px; 
+    left: -350px; /* Permite que os elementos dentro dela se comportem como flex items */
+}
+.depoimentod2 {
+    display: flex; 
+    width: 28%;position: relative;
+    top: 100px; 
+    left: -350px; /* Permite que os elementos dentro dela se comportem como flex items */
+}
+
+.imagemd {
+position: relative;   margin-top: -80px;
+   left: 220px; /* Adiciona um espaço entre a imagem e o texto */
+}
+
+ .cinza {
+    background-color: #f2f2f2; /* Adiciona um fundo cinza claro */
+    padding-top: 20px;
+    height: 220px; /* Adiciona um preenchimento interno para dar espaço ao texto */
+    border-radius: 10px; /* Arredonda as bordas */
+    display: flex; /* Mantém a imagem e o texto alinhados */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+.texto-depoimento {line-height:2.0;
+    margin-top: 20px;
+    margin-left: 20px;width: 100%;/* Adiciona um espaço entre a imagem e o texto */
+}
+.tabela{position: relative;
+top: 1150px; left:-300px; width: 100%;}
+.nome{color: #006400;}
+.botao{position: relative; left: 300px; top: 30px;}
+.blog {
+    position: relative;
+    top: 1250px;
+    width: 65%;
+    height: 800px;
+    left: 210px;
+}
+
+.blog::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%; /* Desloca para a esquerda */
+    width: 200%; /* Faz com que a largura seja o dobro do contêiner pai */
+    height: 100%;
+    background-color: #f2f2f2c7; /* Cinza mais claro */
+    z-index: -1;
+}
+
+
+.blog::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+   
+    left: -50%; /* Ajusta o posicionamento para a esquerda */
+    right: -50%; /* Ajusta o posicionamento para a direita */
+    background-color: #f2f2f2c7; /* Cor do background desejada */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
+}
+
+@font-face {
+            font-family: 'MinhaFontePersonalizada';
+            src: url('C:\Users\rahel\Downloads\site jb mix(mauricio)/readme_tenada_font.ttf') format('truetype'); /* Substitua o caminho com o local onde você salvou a fonte */
+        }
+
+        h1 {
+            font-family: 'MinhaFontePersonalizada', sans-serif; /* Use sua fonte personalizada para o título h1 */
+        }
+.blogt{width: 100%; padding-right: 30px; line-height: 2.0;}
+.titulob{width: 60%;}
+.titulobl {
+    font-size: 30px;
+    
+    color: #073980;
+   
+    font-family:   'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} 
+.tituloblo{padding-top: 30px;
+padding-bottom: 30px;}
+    </style> 
+</head>
+<body>
+    
+        <div class="cabeçalho">
+            <div class="logo">
+                <img src="imagem/LOGO JBMIX.png" height="105px" width="206px">
+            </div>
+            <div class="lg">
+                <center>
+                    <a href="home2.html" class="link">Inicio</a>
+                    <a href="empresa.html" class="link">Empresa</a>
+                    <a href="#" class="link">Produtos</a>
+                    <a href="contato.html" class="link">Contato</a>
+                </center>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <img src="imagem/download-removebg-preview.png" height="20px" width="20px">
+                            <ul>
+                                <li><a href="desinshow.html">desinshow <img src="imagem/desin show.png"></a></li>
+                                <li><a href="#"> finni mais<img src="imagem/finni mais.png" height="10px" width="10px"></a></li>
+                                <li><a href="#">gabiru <img src="imagem/gabiru1.png" alt="Gabiru" height="10px" width="10px"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="login">
+                <div class="verde">
+                    <a href="login.html"><img src="imagem/login__1_-removebg-preview.png" alt="Portal do Cliente" height="75px" width="85px">
+                    Portal do Cliente</a>
+                </div>
+            </div> 
+        </div>

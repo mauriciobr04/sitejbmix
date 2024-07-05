@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Links with Fallback</title>
+    <style>
+        a {
+            display: block;
+            margin: 10px 0;
+            font-size: 20px;
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+    <script>
+        function checkTelSupport() {
+            var telLink = document.createElement('a');
+            telLink.href = 'tel:+1234567890';
+            if (!telLink.protocol.startsWith('tel')) {
+                alert('Seu dispositivo não suporta ligações diretamente deste link.');
+            }
+        }
+
+        function handleTelLinkClick(event) {
+            var telLink = document.createElement('a');
+            telLink.href = event.target.href;
+            if (!telLink.protocol.startsWith('tel')) {
+                event.preventDefault();
+                alert('Seu dispositivo não suporta ligações diretamente deste link.');
+            }
+        }
+    </script>
+</head>
+<body onload="checkTelSupport()">
+    <a href="tel:+1234567890" onclick="handleTelLinkClick(event)">Ligar para +1234567890</a>
+    <a href="tel:+0987654321" onclick="handleTelLinkClick(event)">Ligar para +0987654321</a>
+    <a href="tel:+1122334455" onclick="handleTelLinkClick(event)">Ligar para +1122334455</a>
+</body>
+</html>

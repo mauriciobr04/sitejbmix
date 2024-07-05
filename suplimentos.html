@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+         .container {
+            width:1600px; /* Largura fixa para o conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            /* Adicione outros estilos conforme necessário */
+        }
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        body {
+    font-family: "noto serif",serif;
+        
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        .navbar {
+            margin-bottom: 0;
+            background-color: #001F3F;
+            height: 120px;
+            border-radius: 0;
+            overflow: hidden;
+            padding: 20px 0; /* Adjust the padding to increase header height */
+        }
+        .navbar a {
+            color: white !important;
+        }
+        .navbar a:hover {
+            background-color: #0056b3 !important;
+        }
+        .navbar-header, .navbar-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .navbar-header {
+            position: relative;
+            left:  10%;
+            width: 15%;
+            height: 100px;
+            top:  40px;
+        }
+        .navbar-right {
+            font-family: serif;
+            position: relative;
+            top: 32px;
+            right: 10%;
+        }
+        .navbar-nav {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-nav > li {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-nav > li > a {
+            display: inline-block;
+        }
+        .navbar-center {
+            position: absolute;
+            left: 50%;
+            font-family: serif;
+            top: 30px;
+            font-weight: bold; 
+            color: rgb(95, 96, 97);
+            font-size: 17px;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .localidade {
+            
+            margin-left: 30%;
+            color: white;
+            font-family: "noto serif",serif;
+            margin-top: -80px; /* Ajuste esta propriedade para alinhar verticalmente */
+            font-size: 17px;
+        }
+
+        .redessociais {
+            position: relative;
+            font-family: "noto serif",serif;
+            right: -60%;
+            bottom: 100px; /* Ajuste esta propriedade para alinhar verticalmente */
+            color: white;
+        }
+        .linha {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            z-index: 11;
+            position: relative;
+            bottom: 0px;
+        }
+        body {
+            overflow-x: hidden;
+            font-family: "noto serif",serif;
+        }
+
+        .rodapé {
+            margin-top: 1700px  ;
+            background-color: #001F3F;
+            position: absolute; 
+            font-family: "noto serif",serif;
+            height: 350px;
+            width: 100%;
+            top: -700px; /* Ajuste esta propriedade para o posicionamento vertical */
+        }
+
+        .serviços ul {
+            list-style: none;
+        }
+
+        .serviços {
+            font-family: "noto serif",serif;
+            
+            font-size: 17px;
+            margin-top: -120px;
+            margin-left: 24%;
+            color: white;
+            list-style: none;
+        }
+        .contato ul {
+            list-style: none;
+        }
+        .contato {
+             
+            font-size: 17px;
+            margin-left: 36%;
+            font-family: "noto serif",serif;
+            margin-top: -60px;
+            color: white;
+        }
+
+        .menu-rodape { 
+            font-family: "noto serif",serif;
+            bottom: 25px;
+            margin-left: 12%;
+            color:white;
+            font-size: 17px;
+        }
+        .menu-rodape ul {
+            list-style: none;
+        }
+        .logo2 {
+            width: 15%;
+            margin-left:  10%;
+            margin-top: 20px;
+        }
+        .logo img {
+            height: 105px;
+            width: 206px;
+        }
+        
+
+        .t1{position: relative; 
+        width: 30%;
+    font-size: 100%; left: 10%;
+top: 50px;}
+        .t2{position: relative; 
+        width: 30%; 
+        font-size: 100%;
+        top: 20px;
+        left: 10%;
+        }
+        .t3{position: relative;
+        font-size: 100%; 
+    width: 30%;left: 50%; 
+top: -160px;} 
+        .t4{position: relative; 
+    width: 30%; top:  -100px;
+font-size: 100%; left: 50%;}
+       .texto{position: relative; 
+  top: 100px; background-color: #dcdcdc;     }
+   
+ .textoimagem{position: relative; 
+    font-weight: bold;
+left: 10%; color: #001F3F;}
+  .textverd{position: relative; 
+      left:10%; top: 100px; color: #1e1f41;
+      font-size: 25px;
+ }
+.anuncio{position: relative; text-align: left;top: 50px; }
+.oresto{position: relative; top: 100px; left: 10%;} 
+.login1 {
+            position: absolute;
+            left:14.5%;
+            top: 230px;
+            
+            display: flex;
+            align-items: center;
+        }
+        .login1 img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+
+        .login1 .verde {
+            margin-left: 10px;
+        }
+        .verde1 {
+            background-color: #001F3F;
+            min-height: 50px;
+            color: white;
+            display: flex;
+            position: relative;
+            right: 35%;
+            padding: 5px;
+            top: 5%;
+            width: 179px;
+            align-items: center;
+            border-radius: 10px;
+            padding-right: 25px;
+            font-size: 12px;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="container">
+            <div class="navbar-header">
+                 
+            <img src="imagem/LOGO JBMIX.png" alt="Logo" height="100px" width="206px"> 
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-center">
+                <a href="home2.html" class="link transition-link">Inicio</a>
+                <a href="empresa.html" class="link transition-link">Empresa</a>
+                <a href="produtos.html" class="link transition-link">Produtos</a>
+                <a href="contato.html" class="link transition-link">Contato</a>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Produtos
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="desinshow.html">Desinshow <img src="imagem/desin show.png" height="20px" width="20px"></a></li>
+                        <li><a href="#">Finni Mais <img src="imagem/finni mais.png" height="20px" width="20px"></a></li>
+                        <li><a href="#">Gabiru <img src="imagem/gabiru1.png" alt="Gabiru" height="20px" width="20px"></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="login.html" class="link transition-link"><img src="imagem/login__1_-removebg-preview.png" alt="Portal do Cliente" height="30" width="30"><strong class="portal"> Portal do cliente</strong>  </a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="texto"><div class="textoimagem"><img src="imagem/suplementosp.png" height="auto" width="90PX"> SUPLIMENTOS</div><div class="t2"> JB Mix Distribuidora de Produtos Naturais oferece uma ampla linha de produtos na categoria de suplementos alimentares, trabalhando com fabricantes que fornecem itens nacionais e importados.
+    </div><br><div class="t1">
+        Nosso foco é atender aos lojistas de um segmento em plena expansão. Por isso, dispomos de produtos da linha fitness já conhecidos no mercado, incluindo Whey Protein e barras de proteína, assim como encapsulados e os pré e pós-treinos.
+    </div><br><div class="t3">
+        Além disso, contamos com produtos que auxiliam no ganho e fortalecimento muscular, como Glutamina, Creatina, BCAA, entre outros.
+    </div><br><div class="t4">
+        Trabalhe com suplementos alimentares construindo laços de confiança com a JB Mix Distribuidora. Afinal, somos hoje a maior distribuidora de produtos naturais e referência na distribuição de suplementos alimentares no Brasil.</div>
+    </div> 
+<div class="anuncio"> 
+   <strong class="textverd"> Você quer ser cliente jb?</strong><div class="oresto"> com as maiores marcas do mercado para que você tenha os melhores produtos no seu Ponto de Vendas.<br>
+
+   Solicite a visita de um dos nossos representantes comerciais ou faça o seu pedido via Portal do Cliente.<br>
+   
+   <strong>Cadastre-se e adquira o seu mix de produtos da JB mix Distribuidora.</strong></div><div class="login1">
+    <div class="verde1">
+        <img src="imagem/login__1_-removebg-preview.png" alt="Portal do Cliente" height="75px" width="85px">
+        Portal do Cliente
+    </div>
+</div></div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('fade-in-active');
+    });
+
+    document.querySelectorAll('.transition-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = this.href;
+            }, 500);
+        });
+    });
+</script>
+</div>
+<div class="rodapé">
+    <div class="container">
+        <div class="logo2 ">
+            <img src="imagem/LOGO JBMIX.png" height="100px" width="100%" alt="Logo">
+        </div>
+        <div class="localidade">
+            <strong>Rio Grande do Sul</strong><br>
+            R. Venâncio Aíres, 205<br>
+            Centro, Ijuí - RS<br>
+            C
+            EP 98700-000
+        </div>
+        <div class="redessociais">
+        <strong>Acompanhe a JBmix nas redes sociais</strong><br>
+        <a href="https://www.instagram.com/portaljbmix/"><img src="imagem/intagran (1).png"   height="20px" width="20px"    alt="Instagram"></a>
+        <a href="https://www.facebook.com/p/Portal-JB-Mix-100082896894574/?locale=pt_BR"><img src="imagem/facebook (1).png" height="30px" width="30px"alt="Facebook"></a>
+        </div>
+        <div class="linha"></div>
+        <div class="menu-rodape">
+        <ul>
+        <li><strong>Menu</strong></li>
+        <li>Inicio</li>
+        <li>Sobre Nós</li>
+        <li>Contato</li>
+        </ul>
+        </div>
+        <div class="serviços">
+        <ul>
+        <li><strong>Serviços</strong></li>
+        <li>Portal do Cliente</li>
+        </ul>
+        </div>
+        <div class="contato">
+        <ul>
+        <li><strong>Contato</strong></li>
+        <li><img src="imagem/telefone (1).png" alt="Telefone" height="15" width="15"> (55) 3332-6233</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+</body>
+</html>

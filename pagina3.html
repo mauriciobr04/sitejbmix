@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1000px;
+        width: 600px;
+      }
+      
+      .zoom {
+        overflow: hidden;
+        width: 600px; /* Tamanho inicial */
+        height: 800px; /* Tamanho inicial */
+      }
+      
+      .zoom-img {
+        transition: transform 0.0s ease;
+      }
+      
+      .zoom:hover .zoom-img {
+        transform: scale(1.9); /* Aumenta o tamanho ao passar o mouse */
+      }
+      </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zoom on Hover</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="zoom" id="zoom">
+    <img src="imagem/ansiomax.png" alt="Imagem"  height="1000px" width="600px"  class="zoom-img" id="zoom-img">
+  </div>
+</div>
+
+<script  >const zoom = document.getElementById('zoom');
+    const img = document.getElementById('zoom-img');
+    
+    zoom.addEventListener('mousemove', function(e) {
+      const { left, top, width, height } = this.getBoundingClientRect();
+      const x = (e.clientX - left) / width;
+      const y = (e.clientY - top) / height;
+      img.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+    });
+    </script>
+</body>
+</html>

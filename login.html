@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+          .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+          .verde {
+        background-color: #1d3825;
+        min-height: 60px;
+        color: white;
+        display: flex;position: relative;
+        right:35%;
+        top: 5%; width: 230px;
+        align-items: center;
+        border-radius: 10px;
+        padding-right: 25px;
+        font-size: 12px;
+    }
+        .dph {
+            position: relative;
+            top: 750px;
+            width: 99%;
+            height: 225px; /* Defina uma altura para a div */
+            background-color:rgb(243, 243, 222);
+            z-index: 1; /* Garante que fique acima dos outros elementos */
+            clear: both; /* Limpa floats */
+        }
+        
+        .missao {
+            width: 33.33%;
+            position: absolute;
+            left: 200px;
+            max-width: 300px;
+        }
+        
+        .visao {
+            width: 33.33%;
+            position: absolute;
+            left: 650px;
+            max-width: 300px;
+        }
+        .valores ul {
+    list-style: none; /* Remover as bolinhas de lista */
+}
+
+.valores {
+    width: 33.33%;
+    position: absolute; 
+    left: 1050px;
+    max-width: 300px;
+}
+
+.valores ul {
+    list-style: none; /* Remover as bolinhas de lista */
+    padding: 0;
+}
+
+.valores ul li {
+    margin-bottom: 8px; /* Espaçamento entre os itens da lista */
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+}
+
+.valores ul li::before {
+    content: "•"; /* Utiliza um ponto como marcador */
+    color: #001F3F; /* Cor do marcador */
+    font-size: 14px; /* Tamanho do marcador */
+    margin-right: 8px; /* Espaçamento entre o marcador e o texto */
+}
+body {
+    font-family:  serif;
+        
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        .navbar {
+            margin-bottom: 0;
+            background-color: #001F3F;
+            height: 120px;
+            border-radius: 0;
+            overflow: hidden;
+            padding: 20px 0; /* Adjust the padding to increase header height */
+        }
+        .navbar a {
+            color: white !important;
+        }
+        .navbar a:hover {
+            background-color: #0056b3 !important;
+        }
+        .navbar-header, .navbar-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .navbar-header {
+            position: relative;
+            left: 10%;
+            width: 15%;
+            height: 100px;
+            top:  40px;
+        }
+        .navbar-right {
+            position: relative;
+            top: 32px;
+            font-family: serif;
+            right: 10%;
+        }
+        .navbar-nav {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-nav > li {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-nav > li > a {
+            display: inline-block;
+        }
+        .navbar-center {
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            font-family: serif;
+            font-weight: bold; 
+            color: rgb(95, 96, 97);
+            font-size: 17px;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .localidade {
+            
+            margin-left: 30%;
+            color: white;
+            font-family: "noto serif",serif;
+            margin-top: -80px; /* Ajuste esta propriedade para alinhar verticalmente */
+            font-size: 17px;
+        }
+
+        .redessociais {
+            position: relative;
+            font-family: "noto serif",serif;
+            right: -60%;
+            bottom: 100px; /* Ajuste esta propriedade para alinhar verticalmente */
+            color: white;
+        }
+        .linha {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            z-index: 11;
+            position: relative;
+            bottom: 0px;
+        }
+        body {
+            overflow-x: hidden;
+            font-family: "noto serif",serif;
+        }
+
+        .rodapé {
+            margin-top: 1700px  ;
+            background-color: #001F3F;
+            position: absolute; 
+            font-family: "noto serif",serif;
+            height: 350px;
+            width: 100%;
+            top: -1100px; /* Ajuste esta propriedade para o posicionamento vertical */
+        }
+
+        .serviços ul {
+            list-style: none;
+        }
+
+        .serviços {
+            font-family: "noto serif",serif;
+            
+            font-size: 17px;
+            margin-top: -120px;
+            margin-left: 24%;
+            color: white;
+            list-style: none;
+        }
+        .contato ul {
+            list-style: none;
+        }
+        .contato {
+             
+            font-size: 17px;
+            margin-left: 36%;
+            font-family: "noto serif",serif;
+            margin-top: -60px;
+            color: white;
+        }
+
+        .menu-rodape { 
+            font-family: "noto serif",serif;
+            bottom: 25px;
+            margin-left: 12%;
+            color:white;
+            font-size: 17px;
+        }
+        .menu-rodape ul {
+            list-style: none;
+        }
+        .menu-rodape ul {
+            list-style: none;
+        }
+        .logo2 {
+            width: 15%;
+            margin-left: 10%;
+            margin-top: 20px;
+        }
+        .logo img {
+            height: 105px;
+            width: 206px;
+        }
+        .logando{position: relative;
+        width: 30%;
+    height: 200px;
+    top: 100px;
+    left: 15%; border-right: 1px solid black;
+    padding-right: 25px;
+}.verde a{text-decoration: none; color: white;}
+ 
+            .consultar{position: relative;
+                top:-70px;
+                left:50% ;
+                width: 30%;
+            }
+            .textologin{position: relative;
+                top: 80px;
+                left: 45.5%;
+                text-align: center;
+                transform: translateX(-50%);
+                width: 100%;
+            }
+            .contador{color: gray; float: right;}
+            .novaconta{position: relative; right: 3%; text-align: center; width: 20%;
+            top:   0px; width: 98%;}
+            .logo1 {
+            position: absolute;
+            left: 10%;
+                width: 215px;
+                height: 110px;
+               margin-top: 20px;
+            
+            }
+            body {
+  
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+            width:1600px; /* Largura fixa para o conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            /* Adicione outros estilos conforme necessário */
+        }
+        .cabeçalho{width: 100%; color: white; background-color: #001F3F; height: 150px;} 
+        .login{position: relative; left: 80%; top: -155px;}
+        .logoh{position: relative; height: 105px; width: 206px; left: 10%; margin-top: 20px;} 
+        .meio{position: relative; left: 40%;  padding: 25px; top: -80px; }
+        .meio a{color: white;} 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            color: white;
+            position: absolute;
+            background-color: #001F3F;
+            min-width: 160px;
+            top: 50px;
+            max-width: 210px;;
+            
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            list-style: none;
+            display: block;
+        }
+        
+        .dropdown-content li{list-style: none;}
+        .dropdown-content a:hover {
+            background-color: #f1f1f1; 
+            color: #001F3F;
+        }
+        .login a{ color: white; text-decoration: none;}
+        .show {
+            display: block;
+        }
+        .suspenso{position: relative; left: 230px; width: 10%; top: -22px;}
+        .container {
+            width:100%;
+            max-width: 1590px; /* Largura fixa para o conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            /* Adicione outros estilos conforme necessário */
+        }
+        @media (max-width:1000px){.rodapé {top:  0px; position: relative;    height: 350px;}}
+@media (max-width:1000px){.logando {width: 80%; border: none; font-size: 7.0vw;}}
+@media (max-width:1000px){.consultar {width: 77%; top:  200px; font-size: 7.0vw; left: 15%;}} 
+@media (max-width:1000px){.continuar {margin-left:5%; font-family: 8.0vw; position: relative;left: 43%;}} 
+@media (max-width:1000px){.novaconta {left: 6%; font-size: 6.0vw; font-weight: bold; left: 13%; top: -80px; text-align: center; }}
+
+.linha2 {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            z-index: 110;
+           display: none;
+            position: relative;
+            bottom: -20px;
+        }
+        @media(max-width:1000px){.linha2{display: block; position: relative; bottom:  -200px;}}
+        @media (max-width:1000px){.rodapé {top:  0px; position: relative;    height: 350px;}} 
+        @media (max-width:1000px){.modelo {top:850px; left: 25%; width: 80%; display: none;}}
+        @media (max-width:1000px){.contato1 {left: 22%;}}
+        @media (max-width:1000px){.modelo1 {display: block; top: 850px; left: 12.5%;}}
+        @media (max-width:1000px){.cabeçalho{font-size: 8.5vw;}}
+@media(max-width:1000px){.meio{left: 220px; top: -100px;}}
+@media(max-width:1000px){.logoh{left: 2%;  }}
+@media(max-width:1000px){.login{left:  730px; position: relative; z-index: 120;top: -285px;}}
+
+
+         
+          @media(max-width:1000px){.rodapé{font-size: 9.0vw; top: -800px; height:1000px; position: absolute;}}
+          @media(max-width:1000px){.localidade{font-size: 9.0vw; left: 300px; position: relative;}}
+          @media(max-width:1000px){.menu-rodape{font-size: 9.0vw; top: 740px; position: absolute; }}
+          @media(max-width:1000px){.logo2{font-size: 9.0vw;width: 40%; top: 50px;  position: relative;     }}
+          @media(max-width:1000px){.contato{font-size: 9.0vw; position: absolute; top: 805px;  }}
+          @media(max-width:1000px){.linha{top: -50px;}}
+          @media(max-width:1000px){.serviços{font-size: 9.0vw;position: absolute ; top: 865px; left: 42%;  }  }
+          @media(max-width:1000px){.redessociais{font-size: 9.0vw; top:150px; left:8%; text-align: center;}}
+        @media(max-width:1000px){.textologin{left: 55%;}}
+        @media(max-width:1000px){.senha{font-size: 6.0vw;}} 
+        @media(max-width:1000px){.usuario{font-size:6.0vw ;}}
+        @media(max-width:1000px){.consultartext{font-size: 6.0vw;}}
+    </style>
+</head>
+<body>
+    
+    <script> 
+        function toggleDropdown() {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.classList.toggle('active');
+        }
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            
+                        dropdownToggles.forEach(function(toggle) {
+                            toggle.addEventListener('click', function(e) {
+                                var parentLi = this.parentElement;
+                                var dropdownContent = parentLi.querySelector('.dropdown-content');
+            
+                                if (dropdownContent.classList.contains('show')) {
+                                    dropdownContent.classList.remove('show');
+                                } else {
+                                    var openDropdowns = document.querySelectorAll('.dropdown-content.show');
+                                    openDropdowns.forEach(function(dropdown) {
+                                        dropdown.classList.remove('show');
+                                    });
+                                    dropdownContent.classList.add('show');
+                                }
+            
+                                e.stopPropagation(); // Evitar que o click no dropdown feche o menu
+                            });
+                        });
+            
+                        // Fechar dropdowns ao clicar fora deles
+                        document.addEventListener('click', function(e) {
+                            var dropdowns = document.querySelectorAll('.dropdown-content');
+                            dropdowns.forEach(function(dropdown) {
+                                if (!dropdown.contains(e.target)) {
+                                    dropdown.classList.remove('show');
+                                }
+                            });
+                        });
+                    });
+                </script>
+                <div class="cabeçalho">
+                    <div class="container"><div class="logoh"> <img src="imagem/LOGO JBMIX.png" height="105px" width="206px"></div> <div class="meio"><a href="home2.html" class="link transition-link">Inicio</a>
+                        <a href="empresa.html" class="link transition-link">Empresa</a>
+                        <a href="produtos.html" class="link transition-link">Produtos</a> 
+                        <a href="contato.html" class="link transition-link">Contato</a>
+                        <div class="suspenso">
+                        
+                             
+                                <a href="#" class="dropdown-toggle">paginas <span class="caret"></span></a>
+                                <ul class="dropdown-content">
+                                    <li><a href="#">desinshow</a></li>
+                                    <li><a href="#">finni mais</a></li>
+                                    <li><a href="#">gabiru</a></li>
+                                </ul>
+                            </li>
+                        </ul></div> </div> <div class="login"><a href="login.html"><img src="imagem/login__1_-removebg-preview.png" height="auto" width="30px"> login cliente   </a> </div>  </div>
+                    
+                    
+                    
+                           </div> 
+            <script>
+                window.addEventListener('DOMContentLoaded', () => {
+                    document.body.classList.add('fade-in-active');
+                });
+        
+                document.querySelectorAll('.transition-link').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.body.classList.add('fade-out');
+                        setTimeout(() => {
+                            window.location.href = this.href;
+                        }, 500);
+                    });
+                });
+            </script>
+        <div class="container">
+        <div class="textologin">  portal do cliente </div>
+        <div class="logando" >
+            <strong> ja sou cliente</strong>
+            
+            <form><div class="form-group">
+                
+                <input type="text" class="form-control usuario " id="usr" placeholder="cnpj/usuario">
+              </div>
+              
+            
+              <div class="form-group">
+                
+                <input type="password" class="form-control senha" id="pwd" placeholder="senha">
+              </div> <a href="#" class="pouca memoria"> esqueci minha senha</a>
+            <input type="submit" class="btn btn-primary continuar" value="continuar" > </form>       </div>
+              <div class="consultar"> <form> <div class="form-group">
+            <strong> consultar nota fiscal</strong>
+                <input type="text" class="form-control consultartext" id="texto"  oninput="contarLetras()"oninput="this.value=this.value.replace(/\D/g,''); contarLetras();" maxlength="44" placeholder="informe a chave de acesso da NF-e"> <div class="contador"><span id="contador">0</span>/44</div>
+               <br></brt> <input type="submit" value="continuar" class="btn btn-primary"> 
+               <script>
+                // Função para validar apenas números
+        function validarNumeros(input) {
+            input.value = input.value.replace(/\D/g, '');
+            // Atualiza a contagem de letras
+            document.getElementById("contador").textContent = input.value.length;
+        }
+                function contarLetras() {
+                    // Obtém o valor do texto digitado
+                    var texto = document.getElementById("texto").value;
+                    // Atualiza a contagem de letras
+                    document.getElementById("contador").textContent = texto.length;
+                }
+                </script>   
+              </div></form></div>
+<div class="novaconta">    ainda não é cadastrado?<br><a href="cadastro.html">crie uma conta </a>  </div>
+</div>
+<div class="rodapé">
+    <div class="container">
+        <div class="logo2 ">
+            <img src="imagem/LOGO JBMIX.png" height="100px" width="100%" alt="Logo">
+        </div>
+        <div class="localidade">
+            <strong>Rio Grande do Sul</strong><br>
+            R. Venâncio Aíres, 205<br>
+            Centro, Ijuí - RS<br>
+            C
+            EP 98700-000
+        </div>
+        <div class="redessociais">
+        <strong>Acompanhe a JBmix nas redes sociais</strong><br>
+        <a href="https://www.instagram.com/portaljbmix/"><img src="imagem/intagran (1).png"   height="20px" width="20px"    alt="Instagram"></a>
+        <a href="https://www.facebook.com/p/Portal-JB-Mix-100082896894574/?locale=pt_BR"><img src="imagem/facebook (1).png" height="30px" width="30px"alt="Facebook"></a>
+        </div>
+        <div class="linha"></div>
+        <di class="linha2"></di>
+        <div class="menu-rodape">
+        <ul>
+        <li><strong>Menu</strong></li>
+        <li>Inicio</li>
+        <li>Sobre Nós</li>
+        <li>Contato</li>
+        </ul>
+        </div>
+        <div class="serviços">
+        <ul>
+        <li><strong>Serviços</strong></li>
+        <li>Portal do Cliente</li>
+        </ul>
+        </div>
+        <div class="contato">
+        <ul>
+        <li><strong>Contato</strong></li>
+        <li><img src="imagem/telefone (1).png" alt="Telefone" height="15" width="15"> (55) 3332-6233</li>
+        </ul>
+        </div>
+        </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,747 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+         
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+         
+      
+        <style>
+             .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }.produtos2 {
+                position: relative;
+                top:  50px;
+                  padding-left: 10%;
+                background-color: white;
+                 margin-bottom: -50px;
+                
+                padding-left: 100px;
+                padding-right: 150px;
+                width: 100%;
+                text-align: center;
+            }
+            .produtos {
+                position: relative;
+                height: auto;
+                top:   30px;
+                padding-bottom: -200px;
+                 padding-top: -200px; height: 420px;
+                padding: 50px;
+                 background-color: white;
+                margin-top: 90px;
+                padding-left:100px;
+                padding-right:150px;width: 100%;
+                text-align: center;
+            }
+            .produtos3 {
+                position: relative;
+                top:50px;
+                background-color: white;
+                 
+               
+                padding-right: 150px;
+                padding-left: 100px;
+                width: 100%;
+                text-align: center;
+            }
+            .produtos1 {
+                position: relative;
+                top:50px;
+                background-color: white;
+                 
+                margin-top: 120px;
+                padding-right: 150px;
+                padding-left: 100px;
+                width: 100%;
+                text-align: center;
+            }
+            .preço {
+                color: #006400;
+                font-size: 15px;
+            }
+            .desconto {
+                text-align: right;
+                position: relative;
+                left:  00px;
+                top: -20px;
+                padding-right: 3px;
+                border-radius: 10px;
+                color: white;
+                height: 25px;
+                width: 14%;
+                background-color: #006400;
+            }
+            [data-component="slideshow"] .slide {
+                display: none;
+            }
+            [data-component="slideshow"] .slide.active {
+                display: block;
+            }
+            .slideshow-container {
+                top:80px;
+                background-color: #4c849c;
+                color: white;
+                position: relative;
+                text-align: center;
+            padding: 20px;
+        }
+        .slideshow-container1 {
+                top:130px;
+                background-color: #4c849c;
+                color: white;
+                position: relative;
+                text-align: center;
+            padding: 20px;
+        }
+            
+            
+            .slideshow-text {
+                position: absolute;
+                top: 10px;
+                width: 100%;
+                text-align: center;
+                font-size: 24px;
+                color: white;
+                z-index: 10;
+            }
+     
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .linhaprod {
+    width: 100%;
+    height: 1px;
+    
+    color: white;
+    background-color: white; /* ou a cor desejada */
+    position: relative;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+body {
+    font-family: "noto serif",serif;
+        
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        .navbar {
+            margin-bottom: 0;
+            background-color: #001F3F;
+            height: 120px;
+            border-radius: 0;
+            overflow: hidden;
+            padding: 20px 0; /* Adjust the padding to increase header height */
+        }
+        .navbar a {
+            color: white !important;
+        }
+        .navbar a:hover {
+            background-color: #0056b3 !important;
+        }
+        .navbar-header, .navbar-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .navbar-header {
+            position: relative;
+            left: 10%;
+            width: 15%;
+            height: 100px;
+            top:  40px;
+        }
+        .navbar-right {
+            position: relative;
+            top: 32px;
+            right: 10%;
+        }
+        .navbar-nav {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-nav > li {
+            display: inline-block;
+            float: none;
+        }
+        .navbar-nav > li > a {
+            display: inline-block;
+        }
+      
+        .localidade {
+            
+            margin-left: 30%;
+            color: white;
+            font-family: "noto serif",serif;
+            margin-top: -80px; /* Ajuste esta propriedade para alinhar verticalmente */
+            font-size: 17px;
+        }
+
+        .redessociais {
+            position: relative;
+            font-family: "noto serif",serif;
+            right: -60%;
+            bottom: 100px; /* Ajuste esta propriedade para alinhar verticalmente */
+            color: white;
+        }
+        .linha {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            z-index: 11;
+            position: relative;
+            bottom: 0px;
+        }
+        body {
+            overflow-x: hidden;
+            font-family: "noto serif",serif;
+        }
+
+        .rodapé {
+            margin-top: 1400px  ;
+            background-color: #001F3F;
+            position: absolute; 
+            font-family: "noto serif",serif;
+            height: 350px;
+            width: 100%;
+            top: 800px; /* Ajuste esta propriedade para o posicionamento vertical */
+        }
+
+        .serviços ul {
+            list-style: none;
+        }
+
+        .serviços {
+            font-family: "noto serif",serif;
+            
+            font-size: 17px;
+            margin-top: -120px;
+            margin-left: 24%;
+            color: white;
+            list-style: none;
+        }
+        .contato ul {
+            list-style: none;
+        }
+        .contato {
+             
+            font-size: 17px;
+            margin-left: 36%;
+            font-family: "noto serif",serif;
+            margin-top: -60px;
+            color: white;
+        }
+
+        .menu-rodape { 
+            font-family: "noto serif",serif;
+            bottom: 25px;
+            margin-left: 12%;
+            color:white;
+            font-size: 17px;
+        }
+        .menu-rodape ul {
+            list-style: none;
+        }
+        .logo2 {
+            width: 15%;
+            margin-left: 10%;
+            margin-top: 20px;
+        }
+        
+        .meio a{color: white;}
+        .logo img {
+            height: 105px;
+            width: 206px;
+        }
+.fundobranco{
+    background-color: #f4f4f4; border-radius: 10px;    margin: 10px;
+}
+       .preçoantigo{text-decoration: line-through; color: #888; font-size: 15px;position: relative; right: 10px; font-weight: bold;} 
+       .pesquisa-container {
+            position: fixed;
+            z-index: 15;
+            color: black;
+            bottom: 10px;
+            right: 0px;
+            display: flex;
+            align-items: center;
+            transition: width 0.5s;
+        }
+        .pesquisa-container.active {
+            width: 100%;
+            position: relative;
+            top: 20px;
+            right: 0;
+        }
+        .pesquisa-input {
+            flex: 1;
+            border-radius: 20px;
+            height: 34px;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+        .pesquisa-container.active .pesquisa-input {
+            display: block;
+        }
+        .pesquisa-btn, .new-pesquisa-btn {
+            background-color: #5bc0de;
+            border: none;
+            color: white;
+            height: 34px;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .new-pesquisa-btn {
+            width: 5%;
+        }
+        .logo2 {
+            width: 15%;
+        }
+        .dropdown-menu {
+            background-color: #001F3F;
+            z-index: 11;
+            height: 90px;
+            position: relative;
+             
+           
+            border: 1px solid white;
+        }
+        .cabeçalho{width: 100%; color: white; background-color: #001F3F; height: 150px;}
+        .login{position: relative; left: 80%; top: -155px;}
+        .logoh{position: relative; height: 105px; width: 206px; left: 10%; margin-top: 20px;} 
+        .meio{position: relative; left: 40%; padding: 25px;  top: -80px; }
+        .meio a{color: white;}
+        .container {
+            width:100%; 
+            max-width: 1590px; /* Largura fixa para o conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            /* Adicione outros estilos conforme necessário */
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            color: white;
+            position: absolute;
+            background-color: #001F3F;
+            min-width: 160px;
+            max-width: 160px;;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            list-style: none;
+            display: block;
+        }
+        
+        .dropdown-content li{list-style: none;}
+        .dropdown-content a:hover {
+            background-color: #f1f1f1; 
+            color: #001F3F;
+        }
+        
+        .show {
+            display: block;
+        }
+        .suspenso{position: relative; left: 200px; width: 10%; top: -22px;}
+        /* Estilo para o dropdown */
+ 
+
+/* Estilo para o link "Páginas" dentro do dropdown */
+ 
+/* Estilo para o link "Páginas" quando o dropdown está ativo */
+ 
+
+      
+ 
+ .login a{ color: white; text-decoration: none;}
+ 
+.navbar-nav a:hover{background-color: #f4f4f4;}
+
+.linha2 {
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            z-index: 110;
+           display: none;
+            position: relative;
+            bottom: -20px;
+        }
+        @media(max-width:1000px){.linha2{display: block; position: relative; bottom:  -200px;}}
+        @media (max-width:1000px){.rodapé {top:   700px; position: absolute;    height: 350px;}} 
+        @media (max-width:1000px){.modelo {top:850px; left: 25%; width: 80%; display: none;}}
+        @media (max-width:1000px){.contato1 {left: 22%;}}
+        @media (max-width:1000px){.modelo1 {display: block; top: 850px; left: 12.5%;}}
+        @media (max-width:1000px){.cabeçalho{font-size: 8.5vw;}}
+@media(max-width:1000px){.meio{left: 220px; top: -100px;}}
+@media(max-width:1000px){.logoh{left: 2%;  }}
+@media(max-width:1000px){.login{left:  730px; position: relative; z-index: 120;top: -285px;}}
+
+
+      
+          @media(max-width:1000px){.rodapé{font-size: 9.0vw; height:1000px;}}
+          @media(max-width:1000px){.localidade{font-size: 9.0vw; left: 300px; position: relative;}}
+          @media(max-width:1000px){.menu-rodape{font-size: 9.0vw; top: 740px; position: absolute; }}
+          @media(max-width:1000px){.logo2{font-size: 9.0vw;width: 40%; top: 50px;  position: relative;     }}
+          @media(max-width:1000px){.contato{font-size: 9.0vw; position: absolute; top: 805px;  }}
+          @media(max-width:1000px){.linha{top: -50px;}}
+          @media(max-width:1000px){.serviços{font-size: 9.0vw;position: absolute ; top: 865px; left: 42%;  }  }
+          @media(max-width:1000px){.redessociais{font-size: 9.0vw; top:150px; left:8%; text-align: center;}}
+   
+ </style>
+</style>
+    </head>
+    <body>
+        <script>
+            function toggleDropdown() {
+    var dropdown = document.querySelector('.dropdown-content');
+    dropdown.classList.toggle('active');
+}
+            document.addEventListener('DOMContentLoaded', function() {
+                var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    
+                dropdownToggles.forEach(function(toggle) {
+                    toggle.addEventListener('click', function(e) {
+                        var parentLi = this.parentElement;
+                        var dropdownContent = parentLi.querySelector('.dropdown-content');
+    
+                        if (dropdownContent.classList.contains('show')) {
+                            dropdownContent.classList.remove('show');
+                        } else {
+                            var openDropdowns = document.querySelectorAll('.dropdown-content.show');
+                            openDropdowns.forEach(function(dropdown) {
+                                dropdown.classList.remove('show');
+                            });
+                            dropdownContent.classList.add('show');
+                        }
+    
+                        e.stopPropagation(); // Evitar que o click no dropdown feche o menu
+                    });
+                });
+    
+                // Fechar dropdowns ao clicar fora deles
+                document.addEventListener('click', function(e) {
+                    var dropdowns = document.querySelectorAll('.dropdown-content');
+                    dropdowns.forEach(function(dropdown) {
+                        if (!dropdown.contains(e.target)) {
+                            dropdown.classList.remove('show');
+                        }
+                    });
+                });
+            });
+        </script>
+        <div class="cabeçalho">
+            <div class="container"><div class="logoh"> <img src="imagem/LOGO JBMIX.png" height="105px" width="206px"></div> <div class="meio"><a href="home2.html" class="link transition-link">Inicio</a>
+                <a href="empresa.html" class="link transition-link">Empresa</a>
+                <a href="produtos.html" class="link transition-link">Produtos</a> 
+                <a href="contato.html" class="link transition-link">Contato</a>
+                <div class="suspenso">
+                
+                     
+                        <a href="#" class="dropdown-toggle">paginas <span class="caret"></span></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">desinshow</a></li>
+                            <li><a href="#">finni mais</a></li>
+                            <li><a href="#">gabiru</a></li>
+                        </ul>
+                    </li>
+                </ul></div> </div> <div class="login"><a href="login.html"><img src="imagem/login__1_-removebg-preview.png" height="auto" width="30px"> login cliente   </a> </div>  </div>
+            
+            
+            
+                   </div>
+    <div class="container">
+        <div class="pesquisa-container">
+            <input type="text" class="pesquisa-input form-control" placeholder="Pesquisar...">
+            <button type="button" class="btn pesquisa-btn">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+            
+        </div>
+
+
+        <script src="tras.js"></script>
+        <div class="produtos3">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            
+                            <div class="fundobranco"><div class="desconto"> 0%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                        <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                        <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td> <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div>   </td> <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="slideshow-container">
+            <hr class="linhaprod">
+            <h2>Explore o Mundo Natural: Suas Escolhas, Seu Bem-Estar</h2>
+            <div class="content">
+                <p>Em um mundo cheio de opções, a beleza está na simplicidade e autenticidade dos produtos naturais. Em nosso site, convidamos você a mergulhar em um oceano de possibilidades, onde cada categoria é um convite para uma vida mais saudável, equilibrada e conectada com a natureza.</p>
+            </div>
+            <hr class="linhaprod">
+        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('fade-in-active');
+            });    document.querySelectorAll('.transition-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = this.href;
+                }, 500);
+            });
+        });
+    </script>
+        <script src="slidedf.js"></script>
+        <div class="produtos">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                        <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                        <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td> <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div>   </td> <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> <div class="produtos2">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                        <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                        <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td> <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div>   </td> <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('fade-in-active');
+            });
+    
+            document.querySelectorAll('.transition-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 500);
+                });
+            });
+        </script>
+        <div class="slideshow-container1">
+            <hr class="linhaprod">
+            <h2>Descubra a Sintonia com a Natureza: Seu Bem-Estar em Primeiro Plano</h2> 
+            <div class="content">
+            <p>A natureza é uma fonte inesgotável de saúde, bem-estar e beleza. Em nosso site, você encontrará uma seleção cuidadosa dos melhores produtos naturais, divididos em categorias pensadas para atender a todas as suas necessidades. Permita-se explorar e ser inspirado por tudo o que a natureza tem a oferecer.</p>
+        </div> <hr class="linhaprod">
+        </div>
+        <div class="produtos1">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                        <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                        <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td> <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div>   </td> <td>
+                            <div class="fundobranco"><div class="desconto">10%</div><span class="imagemprod"><img src="imagem/b12.png"></span>
+                            <br><br>Suplemento Multivitamínico e Mineral Avançado para Energia e Bem-Estar Total<br><span class="preçoantigo">R$73,22</span><span class="preço"><strong>R$65,90</strong></span>
+                        </div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="slidedf.js"></script>
+    </div>
+    <div class="rodapé">
+        <div class="container">
+            <div class="logo2">
+                <img src="imagem/LOGO JBMIX.png" height="100px" width="100%" alt="Logo">
+            </div>
+            <div class="localidade">
+                <strong>Rio Grande do Sul</strong><br>
+                R. Venâncio Aíres, 205<br>
+                Centro, Ijuí - RS<br>
+                C
+                EP 98700-000
+            </div>
+            <div class="redessociais">
+            <strong>Acompanhe a JBmix nas redes sociais</strong><br>
+            <a href="https://www.instagram.com/portaljbmix/"><img src="imagem/intagran (1).png"   height="20px" width="20px"    alt="Instagram"></a>
+            <a href="https://www.facebook.com/p/Portal-JB-Mix-100082896894574/?locale=pt_BR"><img src="imagem/facebook (1).png" height="30px" width="30px"alt="Facebook"></a>
+            </div>
+            <div class="linha"></div>
+            <div class="linha2"></div>
+            <div class="menu-rodape">
+            <ul>
+            <li><strong>Menu</strong></li>
+            <li>Inicio</li>
+            <li>Sobre Nós</li>
+            <li>Contato</li>
+            </ul>
+            </div>
+            <div class="serviços">
+            <ul>
+            <li><strong>Serviços</strong></li>
+            <li>Portal do Cliente</li>
+            </ul>
+            </div>
+            <div class="contato">
+            <ul>
+            <li><strong>Contato</strong></li>
+            <li><img src="imagem/telefone (1).png" alt="Telefone" height="15" width="15"> (55) 3332-6233</li>
+            </ul>
+            </div>
+            </div>
+            </div>
+</body>
+<script>
+ 
+    $(document).ready(function(){
+        // Para cada elemento com a classe "fundobranco"
+        $(".fundobranco").each(function(){
+            // Obtemos o valor do preço antigo
+            var precoAntigoText = $(this).find(".preçoantigo").text();
+            var precoAntigo = parseFloat(precoAntigoText.replace("R$", "").trim().replace(",", "."));
+            
+            // Obtemos o valor do desconto
+            var descontoText = $(this).find(".desconto").text();
+            var desconto = parseFloat(descontoText.replace("%", "").trim());
+            
+            // Verificamos se o desconto é zero
+            if (desconto === 0) {
+                // Apagamos apenas o texto do preço antigo
+                $(this).find(".preçoantigo").text("");
+                // Ocultamos a div do desconto
+                $(this).find(".desconto").hide();
+                // Adicionamos um padding extra para cima e para baixo
+                $(this).css("padding", "12px 0");
+                // Adicionamos uma margem para cima na classe "imagemprod"
+                $(this).find(".imagemprod").css("margin-top", "20px");
+            } else {
+                // Calculamos o novo preço considerando o desconto
+                var novoPreco = precoAntigo * (1 - desconto / 100);
+                // Formatamos o novo preço para ter duas casas decimais
+                var novoPrecoFormatado = novoPreco.toFixed(2).replace(".", ",");
+                // Atualizamos o valor do preço original no elemento
+                $(this).find(".preço strong").text("R$" + novoPrecoFormatado);
+            }
+        });
+    });
+     
+    
+    
+    
+    
+    
+            </script>
+             <script>
+              $(document).ready(function(){
+                $('.pesquisa-btn').click(function(){
+                    $('.pesquisa-container').toggleClass('active');
+                    if ($('.pesquisa-container').hasClass('active')) {
+                        $('.pesquisa-input').focus();
+                    }
+                });
+                $(".fundobranco").each(function(){
+                    var precoAntigoText = $(this).find(".preçoantigo").text();
+                    var precoAntigo = parseFloat(precoAntigoText.replace("R$", "").trim().replace(",", "."));
+                    var descontoText = $(this).find(".desconto").text();
+                    var desconto = parseFloat(descontoText.replace("%", "").trim());
+                    if (desconto === 0) {
+                        $(this).find(".preçoantigo").text("");
+                        $(this).find(".desconto").hide();
+                        $(this).css("padding", "12px 0");
+                        $(this).find(".imagemprod").css("margin-top", "20px");
+                    } else {
+                        var novoPreco = precoAntigo * (1 - desconto / 100);
+                        var novoPrecoFormatado = novoPreco.toFixed(2).replace(".", ",");
+                        $(this).find(".preço strong").text("R$" + novoPrecoFormatado);
+                    }
+                });
+            });
+            </script>
+</html>

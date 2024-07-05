@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        nav {
+            max-width: 350px;
+            width: 100%;
+            background-color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            padding: 5px;
+            color: blue;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: aliceblue;
+            text-decoration: none;
+            color: green;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        nav ul li:hover ul {
+            display: block;
+        }
+
+        .logo {
+            position: absolute;
+            left: 200px;
+            width: 215px;
+            height: 110px;
+            margin-top: 20px;
+        }
+
+        .verde {
+            background-color: #006400;
+            min-height: 1%;
+            height: 10%;
+            color: white;
+            display: flex;
+            position: absolute;
+            right: 14%;
+            top: 5%;
+            width: 230px;
+            align-items: center;
+            border-radius: 10px;
+            padding-right: 25px;
+        }
+
+        .menu {
+            margin-right: 1%;
+            position: absolute;
+            right: 29%;
+            top: 7%;
+        }
+
+        .menu img {
+            height: 40px;
+            width: auto;
+        }
+
+        .lg {
+            width: 350px;
+            height: 70px;
+            position: absolute;
+            top: 60px;
+            left: 38%;
+            color: rgb(81, 7, 199);
+        }
+
+        .linhaprodutos {
+            position: absolute;
+            top: 250px;
+            width: 75%;
+            left: 220px;
+        }
+
+        .produtos {
+            display: inline-block;
+            width: 250px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            vertical-align: top;
+        }
+
+        .produtos img {
+            transition: transform 0.3s ease;
+        }
+
+        .produtos:hover img {
+            transform: scale(1.1);
+        }
+
+        .localidade {
+            position: absolute;
+            left: 550px;
+            color: white;
+            bottom: 200px;
+            font-size: 17px;
+        }
+
+        .redessociais {
+            position: absolute;
+            left: 1050px;
+            top: 3360px;
+            color: white;
+        }
+
+        .serviços {
+            position: absolute;
+            font-size: 17px;
+            top: 3550px;
+            left: 500px;
+            color: white;
+        }
+
+        .menu-rodape {
+            position: absolute;
+            top: 3550px;
+            left: 200px;
+            color: white;
+            font-size: 17px;
+        }
+
+        .contato {
+            position: absolute;
+            font-size: 17px;
+            left: 850px;
+            top: 3550px;
+            color: white;
+        }
+
+        .linha {
+            width: 70%;
+            height: 1px;
+            background-color: white;
+            position: absolute;
+            top: 3500px;
+            left: 15%;
+        }
+
+        .linhaprodutos1 {
+            position: absolute;
+            top: 850px;
+            width: 75%;
+            left: 220px;
+        }
+
+        .rodapé {
+            background-color: #001F3F;
+            position: absolute;
+            height: 350px;
+            width: 99%;
+            top: 3300px;
+        }
+.diminuir{font-size: 10px;}
+        .combos {
+            color: #4e6d19;
+            position: absolute;
+            top: 800px;
+            left: 40%;
+        }
+ 
+        .trio {
+            margin-top: 70px;
+        }
+
+        .colageno {
+            position: absolute;
+            top: 1650px;
+            left: 300px;
+        }
+
+        .separador{   background-image: linear-gradient(to left, #4e6d19, #7f922f);
+            position: absolute;
+            width: 60%;
+            left: 18%;
+            top: 650px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            text-align: center;}
+        .separador1 {
+            background-image: linear-gradient(to left, #4e6d19, #7f922f);
+            position: absolute;
+            width: 60%;
+            left: 18%;
+            top: 1525px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding-top: 100px; 
+            border-top: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+        .separador2{background-image: linear-gradient(to left, #4e6d19, #7f922f);
+            position: absolute;
+            width: 60%;
+            left: 18%;
+            top: 2300px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px;
+            border-top: 1px solid black;
+            padding-top: 10px;
+            text-align: center;   }
+        .texto{position: absolute;
+        top: 0px;
+    left: 400px; 
+width: 400px; 
+color: #006400;}
+.kombushow{position: absolute;
+top: 2450px; left: 825px;}
+.texto1{position: absolute; 
+top: 50px;
+width: 400px;
+color: #006400;
+right: 450px;}
+.cinza{color: darkgrey;}
+.verdepreço{color: #7f922f; font-size: 18px;}
+
+.verdemarca{color: #4e6d19;}
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 0; /* Posição ajustável */
+    left: -50px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}
+.triangle1 {
+    width: 0;   
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: -10px; /* Posição ajustável */
+    left: -50px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle2 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: -10px; /* Posição ajustável */
+    left:250px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}
+.triangle3 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: -10px  ; /* Posição ajustável */
+    left: 800px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle4 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: -10px; /* Posição ajustável */
+    left: 520px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle5 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 0; /* Posição ajustável */
+    left: 250px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle6 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 0; /* Posição ajustável */
+    left: 530px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}
+.triangle7 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 0; /* Posição ajustável */
+    left: 800px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}
+.triangle8 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 350px; /* Posição ajustável */
+    left: -10px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle9 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 350; /* Posição ajustável */
+    left: 260px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle10 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 350px; /* Posição ajustável */
+    left: 550px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}.triangle11 {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid green; /* Altura do triângulo */
+    position: absolute;
+    top: 350px; /* Posição ajustável */
+    left: 800px;
+    
+    transform: rotate(315deg); /* Girar o triângulo em 90 graus */
+}
+.textotri{color: white; transform: rotate(45deg); 
+margin-top: 15px;
+font-size: 17px;}
+.butonverde{width: 100%; background-color: #afcc3c;
+color: #006400; 
+border-radius: 5px; 
+height: 30px; margin-top: 10px;
+margin-left: 10PX   ;  
+border:none;}
+    </style>
+</head>
+<body>  
+    <div class="cabeçalho">
+        <div class="logo">
+            <img src="imagem/LOGO JBMIX.png" height="105px" width="206px">
+        </div>
+        <div class="lg">
+            <center>
+                <a href="home2.html" class="link">Inicio</a>
+                <a href="empresa.html" class="link">Empresa</a>
+                <a href="#" class="link">Produtos</a>
+                <a href="contato.html" class="link">Contato</a>
+            </center>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li>
+                        <img src="imagem/download-removebg-preview.png" height="10%" width="10%">
+                        <ul>
+                            <li><a href="desinshow.html">Desinshow <img src="imagem/desin show.png"></a></li>
+                            <li><a href="#">Finni mais <img src="imagem/finni mais.png" height="10px" width="10px"></a></li>
+                            <li><a href="#">Gabiru <img src="imagem/gabiru1.png" alt="Gabiru" height="10px" width="10px"></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="login">
+            <div class="verde">
+                <img src="imagem/login__1_-removebg-preview.png" alt="Portal do Cliente" height="40%" width="40%">
+                Portal do Cliente
+            </div>
+        </div> 
+    </div>
+            
+    <div class="linhaprodutos"> 
+        <div class="produtos">
+            <div class="triangle1"><div class="textotri"><strong>10%<br>off</strong></div></div>
+            <center> 
+                <img src="imagem/ansiomax.png" height="213px" width="213px"><br> 
+                <br><center>Ansiomax - 30 cápsulas<br><span class="verdemarca">DESINSHOW</span><br><strong class="verdepreço"><strong><del class="cinza">R$ 99,90</del></strong> R$ 89,90</strong><br> <span class="verdemarca">Em ate 3x de R$ 29,97</span></center>
+            </center>
+        </div>
+        <div class="produtos">
+            <div class="triangle2"><div class="textotri"><strong>21%<br> off</strong></div></div>
+            <center>
+                <img src="imagem/creatina.jpeg" height="213px" width="213px"><br> 
+                <br><center>Desinshow Creatina 300 gramas<br><span class="verdemarca">DESINSHOW</span><br><strong class="verdepreço"><del class="cinza">139,90</del> R$ 109,90 </strong><br> <span class="verdemarca">Em ate 3x de R$ 36,63</span></center>
+            </center>
+        </div>
+        <div class="produtos">
+            <div class="triangle4"><div class="textotri"><strong>10%<BR>off</strong></div></div>
+            <center>
+                <img src="imagem/ultra hair.jpeg" height="213px" width="213px"><br> 
+                <br><center>Ultra Hair Desinshow - 30 Cápsulas<br><span class="verdemarca">DESINSHOW</span> <br><strong class="verdepreço"><del class="cinza">R$ 99,90</del> 89,90</strong><br> <span class="verdemarca">Em ate 3x de R$ 29,97</span></center>
+            </center>
+        </div> 
+        <div class="produtos">
+            <div class="triangle3"><div class="textotri"><strong>11%<br>off</strong></div></div>
+            <center>
+                <img src="imagem/very show.jpeg" height="213px" width="213px"><br> 
+              <Br>  <center>Desinshow Verishow Lemon Fresch 200 gramas<br><span class="verdemarca">DESINSHOW</span><br> <strong class="verdepreço"><del class="cinza">179,90</del> R$ 159,90</strong><br> <span class="verdemarca">Em ate 3x de R$ 53,30</span></center>
+            </center>
+        </div> 
+    </div>
+    <div class="separador">
+        <p>DESINSHOW É UM GRANDE ALIADO PARA A SUA SAÚDE, ELABORADO POR UMA FAMÍLIA DE NUTRICIONISTAS, POSSUI FÓRMULAS 100% NATURAIS, QUE AUXILIAM NO REJUVENESCIMENTO, NA PERDA DE PESO E NO DESINCHAÇO, COM MUITA MAIS DISPOSIÇÃO E ENERGIA.</p>
+    </div>
+   
+    <strong class="combos"> COMBOS: ECONOMIZE COM KITS DESINSHOW</strong> 
+    <div class="linhaprodutos1"> 
+        <div class="produtos">
+            <div class="triangle"><div class="textotri"><strong>11%<br>off</strong></div></div>
+            <center>
+                <img src="imagem/trio veryshow.jpeg" height="109px" class="trio" width="213px"> <br><br>
+                Trio de VeriShow 200g - 7 em 1 - Para 60 dias!<br><span class="verdemarca"> DESINSHOW</span><br>
+                <strong class="verdepreço"> <del class="cinza"> R$ 477,00</del>
+                R$ 405<br> </strong><span class="verdemarca">Em ate 3x de R$135,00</span>
+                <br>
+            </center>
+        </div>
+        <div class="produtos">
+            <div class="triangle11"><div class="textotri"><strong>17%<br>off</strong></div></div>
+            <center>
+                <img src="imagem/cafe.png" height="200px" height="200px"><br>
+                Combo 1 Cápsula emagrecedora ultraconcentrada + 1 Café Termogênico BlendShow<br><span class="verdemarca">DESINSHOW</span><br>
+               <strong class="verdepreço">  <del class="cinza">R$ 179,90</del> 149,90 </strong><br>
+               <span class="verdemarca"> Em ate 3x de R$ 49,97</span>
+            </center> 
+        </div>
+        <div class="produtos">
+            <div class="triangle5"><div class="textotri"><strong>17%<br> off</strong></div></div>
+            <center>
+                <img src="imagem/cha.png" height="190px" width="190px"><br>
+                Combo Colágeno + Chá VeriShow <br><span class="verdemarca">LANÇAMENTO</span><br><strong class="verdepreço"><del class="cinza">R$ 248,90</del>
+                R$ 215,00</strong> <br><span class="verdemarca"> Em até 3x de R$71,67</span>
+            </center>
+        </div>
+        <div class="produtos">
+            <div class="triangle6"><div class="textotri"><strong>14%<br>off</strong></div></div>
+            <center>
+                <img src="imagem/duo blend.png" height="200px" width="170px "><br>
+                Duo Blend - 2 Blends Proteicos Desinshow (400g)<br><span class="verdemarca"> DESINSHOW</span><br>
+                <strong class="verdepreço">
+                <del class="cinza">R$239,80</del> 199,98</strong><br> <span class="verdemarca"> Em até 3x de R$ 66,66</span>
+            </center>
+        </div>
+        <div class="produtos">
+            <div class="triangle7"><div class="textotri"><strong>17%<br> off</strong></div></div>
+            <center>
+                <img src="imagem/download-removebg-preview (1).png" height="200px" width="170px"> <br>
+            Duo Prático - Blend Proteico 400g & 30g - Sabor Amora<br><span class="verdemarca"> DESINSHOW</span><br>,<strong class="verdepreço"><del class="cinza">  R$ 134,80</del>               R$ 109,89 
+            </strong><br> <span class="verdemarca"> Em até 3x de R$ 36,63 </span>
+        </center>
+        </div>
+        <div class="produtos">
+            <div class="triangle8"><div class="textotri"><strong>18%<br> off</strong></div></div>
+            <center>
+                <img src="imagem/download__2_-removebg-preview.png" height="200px" width="170px"><br>
+                Duo Blend - Proteico 400g & 30g - Sabor Chocolate Belga <br> <span class="verdemarca"> DESINSHOW</span>
+                <br> <strong class="verdepreço"><del class="cinza">R$ 134,80</del>
+                R$ 109,89</strong><br> <span class="verdemarca"> Em até 3x de R$36,63</span>
+            </center>
+        </div>
+        <div class="produtos"> 
+            <div class="triangle9"><div class="textotri"><strong>18%<br> off</strong></div></div>
+            <center>
+                <img src="imagem/blend.png" height="200px" width="170px"><br>
+                Duo Prático - Blend Proteico 400g & 30g - Sabor Abacaxi com Hortelã<br><span class="verdemarca"> DESINSHOW</span>
+                <BR> <strong class="verdepreço"><del class="cinza"> 134,80</del>
+                R$ 109,98</strong><br> <span class="verdemarca"> Em até 3x e R$ 36,63</span>
+            </center>
+        </div>
+        <div class="produtos">
+            <div class="triangle10"><div class="textotri"><strong>18%<br>off</strong></div></div>
+            <center>
+                <img src="imagem/download__3_-removebg-preview.png" height="200px" width="200px"><br> 
+                Combo Versatilidade - 3 Blends Proteicos <br><span class="verdemarca"> DESINSHOW</span><strong class="verdepreço"><del class="cinza">R$ 359,70</del> R$299,97</strong>
+<br> <span class="verdemarca">Em até 3x de R$ 99,99</span>            </center>
+        </div>
+    </div> 
+        
+    <div class="separador1"> UMA FÓRMULA COMPLETA DE PRODUTOS NATURAIS EXCLUSIVAMENTE PENSADAS PARA DIMINUIR O INCHAÇO DO CORPO, DESINTOXICAR E PROPICIAR MAIS SAÚDE E BEM ESTAR.</div>
+
+    <div class="colageno"> <img src="imagem/images (1).png" height="609px" width="400px"><div class="texto"><strong><center>COLÁGENO VERISHOW: SINTA O PODER DA BELEZA NA SUA PELE, UNHAS E CABELO!</strong><br><br>
+
+        Graças a sua composição exclusiva 7 em 1, aumenta a elasticidade e firmeza da pele melhorando o seu aspecto e hidratação, fortalece as unhas e os cabelos e ainda reduz flacidez e celulites.<br><br>
+        
+        <strong> porque tomar colágeno?</strong><BR>
+        O colagéno é a proteína mais abundante no organismo, é ela que dá firmeza e sustentação para a pele, além de ser importante para as unhas e cabelo. No entanto, a partir dos 25 anos, tem a sua produção naturalmente reduzida. Por isso, repor o colágeno é muito importante!<br><br>
+        
+       <strong> O COLÁGENO VERISHOW É MUITO MAIS DO QUE UM SIMPLES COLÁGENO!</strong><br><br>
+        É uma fórmula sinérgica que também inclui, ácido hialurônico, silício, zinco e cobre, proteínas e minerais essenciais, bem como vitaminas A, C D3, E.<br>   <br>
+        
+        Como se não bastasse, ainda conta um sabor incrível de frutas vermelhas e pode ser usado para fazer shakes, sucos ou receitas proteicas, ou ainda mais fácil, ser diluído em água.<br><br>
+        
+      <strong>  Nada de trapaças aqui! </strong><br>
+        Todos os benefícios são comprovados cientificamente 😉<br><BR>
+        
+       <strong> Experimente e sinta o poder da beleza a seu favor!</strong>
+    <button class="butonverde"> QUERO TER A PELE, CABELO E UNHAS SAUDAVEIS</button></center></div> </div>
+<div class=" separador2"> SEU CORPO É UM TEMPLO E MERECE SER TRATADO COM CARINHO. CUIDE DE SI MESMO COM UMA ALIMENTAÇÃO EQUILIBRADA, EXERCÍCIOS REGULARES E AMOR PRÓPRIO.
+
+    O EMAGRECIMENTO É UMA JORNADA DE AUTODESCOBERTA E TRANSFORMAÇÃO!🤍</div> 
+    
+    <div class="rodapé"> <div class="logo"> <img src="imagem/LOGO JBMIX.png" height="85px" width="206px"></div> 
+<div class="localidade"> <strong> Rio Grande do Sul</strong>    <br>
+R. Venâncio Aíres, 205 <br>  Centro, Ijuí - RS<br>CEP  98700-000</div>
+</div>
+<div class="redessociais"> <strong> Acompanhe a JBmix nas redes socias</strong>
+    <center>
+<br> <a href="https://www.instagram.com/portaljbmix/"><img src="imagem/intagran (1).png" height="20px" width="20px"></a>
+<a href="https://www.facebook.com/p/Portal-JB-Mix-100082896894574/?locale=pt_BR"><img src="imagem/facebook (1).png" height="30px" width="30px"></a></center> </div>
+<div class="linha"> <div class=""></div></div>
+<div class="menu-rodape"><ul> <li><strong> menu</strong> </li>
+<li>
+Inicio
+</li>
+<li> sobre nós</li>
+<li> contato</li>
+</ul> </div>
+<div  class="serviços"> <ul> <LI><strong> serviços</strong></LI>
+<li> portal do cliente</li>
+</ul></div>
+<div class="contato"> <ul> <li><strong> contato </strong></li>
+<li> <img src="imagem/telefone (1).png" height="15px" width="15px"> (55) 3332-6233        </li></ul></div>
+</body>
+</html>

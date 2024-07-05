@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Elemento com Múltiplas Classes</title>
+    <style>
+        .classe1 {
+            background-color: yellow;
+        }
+        .classe2 {
+            font-size: 20px;
+        }
+        .oculto {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="classe1 classe2" onclick="toggleVisibility()">Clique em mim</button>
+    <div class="classe1 classe2 classe3">Este elemento tem várias classes</div>
+    <div class="classe1 classe3">Este elemento tem outras classes</div>
+
+    <script>
+        function toggleVisibility() {
+            var elements = document.querySelectorAll('.classe3');
+            elements.forEach(function(element) {
+                element.classList.toggle('oculto');
+            });
+        }
+    </script>
+</body>
+</html>
